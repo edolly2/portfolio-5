@@ -1,28 +1,25 @@
 import './App.css';
 import { useState } from 'react';
-import Layout from './layout/Layout';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import SkillsPage from './pages/SkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
-import MobileMenu from './components/MobileMenu';
+import Header from './components/Header';
+import Layout from './layout/Layout';
 
 
 function App() {
-  const [mobileMenuActive, setMobileMenuActive] = useState(false);
-
   return (
     <Layout>
+      <Header />
       <Routes>
-
-        <MobileMenu onMenuClick={() => { setMobileMenuActive(true) }} style={{ display: mobileMenuActive ? 'flex' : 'none' }} onExitClick={() => { setMobileMenuActive(false) }} onNavLinkClick={() => { setMobileMenuActive(false) }} />
-        <Route to='/' element={<HomePage />} />
-        <Route to='/about' element={<AboutPage />} />
-        <Route to='/skills' element={<SkillsPage />} />
-        <Route to='/projects' element={<ProjectsPage />} />
-        <Route to='/contact' element={<ContactPage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/skills' element={<SkillsPage />} />
+        <Route path='/projects' element={<ProjectsPage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
     </Layout>
   );

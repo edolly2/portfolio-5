@@ -3,31 +3,46 @@ import { NavLink } from 'react-router-dom';
 
 const Container = styled.div``;
 const Nav = styled.nav``;
-const NavList = styled.ul``;
+const NavList = styled.ul`
+  display: flex;
+  gap: 1.6rem;
+`;
 const NavListItem = styled.li``;
 
-const DesktopNav = () => {
+const DesktopNav = (props) => {
   return (
-    <Container>
+    <Container style={props.DesktopNavStyle}>
       <Nav>
         <NavList>
           <NavListItem>
-            <NavLink to='/'>Home</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/'>
+              Home
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink to='/about'>About</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/about'>
+              About
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink to='/skills'>Skills</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/skills'>
+              Skills
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink to='/projects'>Projects</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/projects'>
+              Projects
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink to='/contact'>Contact</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/contact'>
+              Contact
+            </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink to='/blog'>Blog</NavLink>
+            <NavLink onClick={props.onNavLinkClick} to='/blog'>
+              Blog
+            </NavLink>
           </NavListItem>
         </NavList>
       </Nav>

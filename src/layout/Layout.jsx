@@ -13,8 +13,6 @@ const PageLayout = styled.div`
 const Layout = ({ children }) => {
   return (
     <PageLayout>
-      <Header />
-      {/* <MobileMenu onMenuClick={props.onMenuClick} /> */}
       <main>{children}</main>
     </PageLayout>
   );

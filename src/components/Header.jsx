@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
 import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
+import MobileMenu from './MobileMenu';
 import styled from 'styled-components';
+import SiteBrand from './SiteBrand';
 
-const Container = styled.header``;
+const Container = styled.header`
+  position: relative;
+  display: flex;
+`;
 
 const Header = (props) => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -12,17 +17,25 @@ const Header = (props) => {
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
   }, []);
+
   return width < breakpoint ? (
     <Container>
+      <SiteBrand />
       <MobileNav
-        onClick={() => {
+        onMenuClick={() => {
           setIsMobileMenuActive(!isMobileMenuActive);
         }}
-        mobileNavStyle={{ display: isMobileMenuActive ? 'flex' : 'none' }}
+      />
+      <MobileMenu
+        mobileMenuStyle={{ display: isMobileMenuActive ? 'flex' : 'none' }}
+        onMenuItemClick={() => {
+          setIsMobileMenuActive(false);
+        }}
       />
     </Container>
   ) : (
     <Container>
+      <SiteBrand />
       <DesktopNav onContactClick={props.onContactClick} />
     </Container>
   );

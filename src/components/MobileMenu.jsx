@@ -1,79 +1,55 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { TfiClose } from 'react-icons/tfi';
 
-const MobileMenuWrapper = styled.div`
+const MenuContainer = styled.div`
   position: absolute;
-  left: 0;
+  top: 100%;
   right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(5px);
-  /* width: 100%; */
-  /* height: 100%; */
-  z-index: 2;
-  padding: 2.4rem;
-  display: flex;
-  flex-direction: column;
+  left: 0;
+  background-color: blue;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 `;
 
 const MobileNav = styled.nav`
   width: 100%;
+  display: flex;
+  justify-content: center;
 `;
-
 const MobileNavList = styled.ul`
-  list-style: none;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: center;
+  gap: 1.6rem;
   align-items: center;
-  gap: 2.4rem;
-  padding: 2.4rem 0;
-  /* color: white; */
 `;
-
-const MobileNavListItem = styled.li`
-  /* color: white; */
-  /* text-decoration: none; */
-`;
+const MobileNavListItem = styled.li``;
 
 const MobileMenu = (props) => {
   return (
-    <MobileMenuWrapper style={props.style}>
-      <TfiClose className='icon exit-icon' onClick={props.onExitClick} />
+    <MenuContainer style={props.mobileMenuStyle}>
       <MobileNav>
         <MobileNavList>
-          <MobileNavListItem onClick={props.onNavLinkClick}>
-            <NavLink className='nav-link' to='/'>
-              HOME
-            </NavLink>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/'>Home</NavLink>
           </MobileNavListItem>
-          <MobileNavListItem onClick={props.onNavLinkClick}>
-            <NavLink className='nav-link' to='/about'>
-              ABOUT
-            </NavLink>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/about'>About</NavLink>
           </MobileNavListItem>
-          <MobileNavListItem onClick={props.onNavLinkClick}>
-            <NavLink className='nav-link' to='/skills'>
-              SKILLS
-            </NavLink>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/skills'>Skills</NavLink>
           </MobileNavListItem>
-          <MobileNavListItem onClick={props.onNavLinkClick}>
-            <NavLink className='nav-link' to='/projects'>
-              PROJECTS
-            </NavLink>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/projects'>Projects</NavLink>
           </MobileNavListItem>
-          <MobileNavListItem onClick={props.onNavLinkClick}>
-            <NavLink className='nav-link' to='/contact'>
-              CONTACT
-            </NavLink>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/contact'>Contact</NavLink>
           </MobileNavListItem>
-          <MobileNavListItem>BLOG</MobileNavListItem>
+          <MobileNavListItem onClick={props.onMenuItemClick}>
+            <NavLink to='/blog'>Blog</NavLink>
+          </MobileNavListItem>
         </MobileNavList>
       </MobileNav>
-    </MobileMenuWrapper>
+    </MenuContainer>
   );
 };
 

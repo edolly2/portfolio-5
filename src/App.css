@@ -56,6 +56,10 @@ li {
   padding: 0 1.6rem 1.6rem 1.6rem;
 }
 
+.icon {
+  font-size: 32px;
+}
+
 /* .pad-sides {
   padding: 0 1.6rem;
 } */

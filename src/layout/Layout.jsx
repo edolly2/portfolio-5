@@ -5,9 +5,9 @@ import Header from '../components/Header';
 const PageLayout = styled.div`
   background-color: green;
   max-width: 1080px;
-  height: 100vh;
   margin: 0 auto;
   padding: 2.4rem;
+  height: 100vh;
 `;
 
 const Layout = ({ children }) => {

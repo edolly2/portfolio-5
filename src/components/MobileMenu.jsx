@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const MenuContainer = styled.div`
   position: absolute;
@@ -9,6 +10,9 @@ const MenuContainer = styled.div`
   background-color: blue;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 `;
 
 const MobileNav = styled.nav`
@@ -23,6 +27,13 @@ const MobileNavList = styled.ul`
   align-items: center;
 `;
 const MobileNavListItem = styled.li``;
+
+const SocialContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+`;
 
 const MobileMenu = (props) => {
   return (
@@ -49,6 +60,12 @@ const MobileMenu = (props) => {
           </MobileNavListItem>
         </MobileNavList>
       </MobileNav>
+      <SocialContainer>
+        <FaGithub className='icon' />
+        <FaLinkedinIn className='icon' />
+        <FaFacebook className='icon' />
+        <FaTwitter className='icon' />
+      </SocialContainer>
     </MenuContainer>
   );
 };

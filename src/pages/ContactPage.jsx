@@ -4,17 +4,21 @@ import PageTitle from '../layout/PageTitle';
 import Layout from '../layout/Layout';
 import HomePage from './HomePage';
 import { Routes, Route } from 'react-router-dom';
-const ContactPageContainer = styled.div``;
 
 const Form = styled.form`
   padding: 1.6rem;
+`;
+
+const FormHeader = styled.p`
+  text-align: center;
+  margin-bottom: 2.4rem;
 `;
 
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  margin-bottom: 1.6rem;
+  /* margin-bottom: 1.6rem; */
   @media screen and (min-width: 486px) {
     flex-direction: row;
     justify-content: center;
@@ -41,6 +45,7 @@ const TextAreaWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3.6rem 0;
 `;
 
 const TextArea = styled.textarea`
@@ -63,48 +68,48 @@ const BtnGroup = styled.div`
 const ContactPage = (props) => {
   return (
     <Layout>
-      <ContactPageContainer>
-        <PageTitle title='Get In Touch' />
-        <p style={{ marginBottom: '2.4rem' }}>I Would Love to Hear From You</p>
-        <Form>
-          <FormGroup>
-            <FormControl>
-              <Label for='name'>Name</Label>
-              <Input
-                type='text'
-                name='name'
-                id='name'
-                required
-                placeholder='Full Name'
-              />
-            </FormControl>
-            <FormControl>
-              <Label for='email'>Email</Label>
-              <Input
-                type='email'
-                name='email'
-                id='email'
-                required
-                placeholder='Example@email.com'
-              />
-            </FormControl>
-          </FormGroup>
-          <TextAreaWrapper>
-            <Label for='thoughts'>Your Thoughts</Label>
-            <TextArea
-              name='thoughts'
-              id='thoughts'
-              rows={10}
-              // cols={30}
-              placeholder='Thank you for showing interest in my portfolio.'
+      {/* <ContactPageContainer> */}
+      <PageTitle title='Get In Touch' />
+      <Form>
+        <FormHeader>I Would Love to Hear From You</FormHeader>
+        <FormGroup>
+          <FormControl>
+            <Label for='name'>Name</Label>
+            <Input
+              type='text'
+              name='name'
+              id='name'
+              required
+              placeholder='Full Name'
             />
-          </TextAreaWrapper>
-          <BtnGroup>
-            <Button type='submit' text='Submit' />
-            <Button text='Cancel' />
-          </BtnGroup>
-        </Form>
-      </ContactPageContainer>
+          </FormControl>
+          <FormControl>
+            <Label for='email'>Email</Label>
+            <Input
+              type='email'
+              name='email'
+              id='email'
+              required
+              placeholder='Example@email.com'
+            />
+          </FormControl>
+        </FormGroup>
+        <TextAreaWrapper>
+          <Label for='thoughts'>Your Thoughts</Label>
+          <TextArea
+            name='thoughts'
+            id='thoughts'
+            rows={10}
+            // cols={30}
+            placeholder='Thank you for showing interest in my portfolio.'
+          />
+        </TextAreaWrapper>
+        <BtnGroup>
+          <Button type='submit' text='Submit' />
+          <Button text='Cancel' />
+        </BtnGroup>
+      </Form>
+      {/* </ContactPageContainer> */}
     </Layout>
   );
 };

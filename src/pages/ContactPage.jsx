@@ -6,18 +6,29 @@ import HomePage from './HomePage';
 import { Routes, Route } from 'react-router-dom';
 const ContactPageContainer = styled.div``;
 
-const Form = styled.form``;
+const Form = styled.form`
+  padding: 1.6rem;
+`;
 
 const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   margin-bottom: 1.6rem;
+  @media screen and (min-width: 486px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+  }
 `;
 
 const FormControl = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    gap: 0.4rem;
+  }
 `;
 
 const Label = styled.label``;
@@ -26,10 +37,15 @@ const Input = styled.input`
   padding: 0.4rem;
 `;
 
-const TextAreaWrapper = styled.div``;
+const TextAreaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const TextArea = styled.textarea`
   padding: 0.4rem;
+  max-width: 48rem;
   width: 100%;
 `;
 
@@ -38,6 +54,10 @@ const BtnGroup = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 1.6rem;
+  @media screen and (min-width: 420px) {
+    justify-content: center;
+    gap: 1.6rem;
+  }
 `;
 
 const ContactPage = (props) => {

@@ -8,11 +8,21 @@ TV: 1201px-UP */
   border-radius: 0.4rem;
 }
 
+html {
+  background-image: url('./assets/planet.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   min-height: 100vh;
 }
+
+
 
 h1,
 h2,

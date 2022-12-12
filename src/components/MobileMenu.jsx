@@ -13,6 +13,7 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  z-index: 4 !important;
 `;
 
 const MobileNav = styled.nav`

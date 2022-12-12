@@ -4,7 +4,7 @@ const Btn = styled.button`
   padding: 0.8rem;
   border-radius: 0.8rem;
   width: 12rem;
-  height: 4rem;
+  height: 3.2rem;
   /* margin: 2.4rem 0; */
   &:hover {
     cursor: pointer;

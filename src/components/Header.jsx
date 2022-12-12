@@ -8,6 +8,8 @@ import SiteBrand from './SiteBrand';
 const Container = styled.header`
   position: relative;
   display: flex;
+  background-color: rgba(119, 119, 119, 0.5);
+  backdrop-filter: blur(5px);
 `;
 
 const Header = (props) => {

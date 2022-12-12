@@ -1,7 +1,12 @@
-import React from 'react';
+import Layout from '../layout/Layout';
+import PageTitle from '../layout/PageTitle';
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <Layout>
+      <PageTitle title='Eric Dollinger' />
+    </Layout>
+  );
 };
 
 export default HomePage;

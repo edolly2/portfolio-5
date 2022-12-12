@@ -7,7 +7,8 @@ const PageLayout = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   padding: 2.4rem;
-  height: 100vh;
+  min-height: 85vh;
+  /* min-height: 100%; */
 `;
 
 const Layout = ({ children }) => {

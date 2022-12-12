@@ -11,7 +11,7 @@ TV: 1201px-UP */
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1,
@@ -22,6 +22,14 @@ h5,
 h6 {
   font-family: 'Bebas Neue', cursive;
 }
+
+/* h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+} */
 
 h1 {
   font-size: calc(32px + (48 - 32) * ((100vw - 360px) / (1920 - 360)));
@@ -64,3 +72,7 @@ li {
 /* .pad-sides {
   padding: 0 1.6rem;
 } */
+
+.dark-mode-icon {
+  font-size: 1.6rem;
+}

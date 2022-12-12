@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import DarkMode from './DarkMode';
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 2.4rem;
+`;
 const Nav = styled.nav``;
 const NavList = styled.ul`
   display: flex;
@@ -14,8 +21,13 @@ const DesktopNav = (props) => {
     <Container style={props.DesktopNavStyle}>
       <Nav>
         <NavList>
+          <DarkMode />
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/'>
+            <NavLink
+              style={{ marginLeft: '2.4rem' }}
+              onClick={props.onNavLinkClick}
+              to='/'
+            >
               Home
             </NavLink>
           </NavListItem>

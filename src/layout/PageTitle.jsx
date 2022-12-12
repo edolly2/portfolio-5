@@ -5,7 +5,7 @@ const Title = styled.h1`
 `;
 
 const PageTitle = (props) => {
-  return <Title>{props.title}</Title>;
+  return <Title>&lt;{props.title}/&gt;</Title>;
 };
 
 export default PageTitle;

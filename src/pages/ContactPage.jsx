@@ -71,10 +71,10 @@ const ContactPage = (props) => {
       {/* <ContactPageContainer> */}
       <PageTitle title='Get In Touch' />
       <Form>
-        <FormHeader>I Would Love to Hear From You</FormHeader>
+        <FormHeader>//I Would Love to Hear From You</FormHeader>
         <FormGroup>
           <FormControl>
-            <Label for='name'>Name</Label>
+            <Label htmlFor='name'>Name</Label>
             <Input
               type='text'
               name='name'
@@ -84,7 +84,7 @@ const ContactPage = (props) => {
             />
           </FormControl>
           <FormControl>
-            <Label for='email'>Email</Label>
+            <Label htmlFor='email'>Email</Label>
             <Input
               type='email'
               name='email'
@@ -95,7 +95,7 @@ const ContactPage = (props) => {
           </FormControl>
         </FormGroup>
         <TextAreaWrapper>
-          <Label for='thoughts'>Your Thoughts</Label>
+          <Label htmlFor='thoughts'>Your Thoughts</Label>
           <TextArea
             name='thoughts'
             id='thoughts'

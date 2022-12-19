@@ -70,14 +70,34 @@ const BtnGroup = styled.div`
 `;
 
 const ContactPage = (props) => {
-  // const [isSubmitActive, setIsSubmitActive] = useState(false);
+  const [status, setStatus] = useState('Submit');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch('http://localhost:5000/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus('Submit');
+    let result = await response.json();
+    alert(result.status);
+  };
 
   return (
     <Layout>
       {/* <SubmitModal style={{ display: isSubmitActive ? 'flex' : 'none' }} /> */}
       {/* <ContactPageContainer> */}
       <PageTitle title='Get In Touch' />
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <FormHeader>//I Would Love to Hear From You</FormHeader>
         <FormGroup>
           <FormControl>
@@ -102,26 +122,18 @@ const ContactPage = (props) => {
           </FormControl>
         </FormGroup>
         <TextAreaWrapper>
-          <Label htmlFor='thoughts'>Your Thoughts</Label>
+          <Label htmlFor='message'>Your Thoughts</Label>
           <TextArea
-            name='thoughts'
-            id='thoughts'
+            name='message'
+            id='message'
+            required
             rows={10}
             // cols={30}
             placeholder='Thank you for showing interest in my portfolio.'
           />
         </TextAreaWrapper>
         <BtnGroup>
-          <Button
-            type='submit'
-            text='Submit'
-            onClick={() => {
-              // setTimeout(() => {
-              // e.preventDefault();
-              // isSubmitActive(true);
-              // }, 2000);
-            }}
-          />
+          <Button type='submit' text={status} />
           {/* <NavLink to='/'> */}
           <Button text='Cancel' />
           {/* </NavLink> */}

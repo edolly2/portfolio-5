@@ -4,7 +4,7 @@ laptop: 769px—1024px
 Desktops: 1025px—1200px 
 TV: 1201px-UP */
 * {
-  border: 0.4px solid red;
+  /* border: 0.4px solid red; */
   border-radius: 0.4rem;
 }
 
@@ -15,6 +15,14 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
+
+/* .not-normal {
+  background-image: url('./assets/sun.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+} */
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -77,6 +85,25 @@ li {
 
 .icon {
   font-size: 32px;
+  color: rgba(150, 35, 113, 0.7);
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(150, 35, 113);
+
+}
+
+.nav-link {
+  /* font-size: 32px; */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
 }
 
 /* .pad-sides {
@@ -85,4 +112,17 @@ li {
 
 .dark-mode-icon {
   font-size: 1.6rem;
+}
+
+.h-center {
+  display: flex;
+  /* align-items: center; */
+}
+
+.purple {
+  color: #962371;
+}
+
+.white {
+  color: white;
 }

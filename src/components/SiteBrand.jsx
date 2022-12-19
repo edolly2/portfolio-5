@@ -20,7 +20,7 @@ const SiteBrandImg = styled.img`
 const SiteBrand = () => {
   return (
     <SiteBrandWrapper>
-      <NavLink to='/'>
+      <NavLink className='h-center' to='/'>
         <SiteBrandImg src={Logo} alt='Logo with the letters E and D' />
       </NavLink>
     </SiteBrandWrapper>

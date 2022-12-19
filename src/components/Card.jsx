@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Headshot from '../assets/me-headshot.png';
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from 'react-icons/fa';
 import Button from './Button';
+import { NavLink } from 'react-router-dom';
 
 const CardWrapper = styled.div`
   /* position: relative; */
@@ -46,6 +47,10 @@ const Line = styled.div`
 const BtnGroup = styled.div`
   display: flex;
   gap: 1.6rem;
+  flex-direction: column;
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
 `;
 
 const Card = () => {
@@ -60,8 +65,12 @@ const Card = () => {
         <FaTwitter className='icon' />
       </CardSocialWrapper>
       <BtnGroup>
-        <Button text='Explore' />
-        <Button text='Contact' />
+        <NavLink to='/about'>
+          <Button text='Explore' />
+        </NavLink>
+        <NavLink to='/contact'>
+          <Button text='Contact' />
+        </NavLink>
       </BtnGroup>
     </CardWrapper>
   );

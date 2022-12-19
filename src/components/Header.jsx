@@ -10,6 +10,7 @@ const Container = styled.header`
   display: flex;
   background-color: rgba(119, 119, 119, 0.5);
   backdrop-filter: blur(5px);
+  padding: 0.8rem;
 `;
 
 const Header = (props) => {

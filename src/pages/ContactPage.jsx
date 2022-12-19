@@ -3,7 +3,9 @@ import Button from '../components/Button';
 import PageTitle from '../layout/PageTitle';
 import Layout from '../layout/Layout';
 import HomePage from './HomePage';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import SubmitModal from '../components/SubmitModal';
+import { useState } from 'react';
 
 const Form = styled.form`
   padding: 1.6rem;
@@ -56,18 +58,23 @@ const TextArea = styled.textarea`
 
 const BtnGroup = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.6rem;
+  flex-direction: column;
+  gap: 1.6rem;
+
   @media screen and (min-width: 420px) {
     justify-content: center;
-    gap: 1.6rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.6rem;
   }
 `;
 
 const ContactPage = (props) => {
+  // const [isSubmitActive, setIsSubmitActive] = useState(false);
+
   return (
     <Layout>
+      {/* <SubmitModal style={{ display: isSubmitActive ? 'flex' : 'none' }} /> */}
       {/* <ContactPageContainer> */}
       <PageTitle title='Get In Touch' />
       <Form>
@@ -105,8 +112,19 @@ const ContactPage = (props) => {
           />
         </TextAreaWrapper>
         <BtnGroup>
-          <Button type='submit' text='Submit' />
+          <Button
+            type='submit'
+            text='Submit'
+            onClick={() => {
+              // setTimeout(() => {
+              // e.preventDefault();
+              // isSubmitActive(true);
+              // }, 2000);
+            }}
+          />
+          {/* <NavLink to='/'> */}
           <Button text='Cancel' />
+          {/* </NavLink> */}
         </BtnGroup>
       </Form>
       {/* </ContactPageContainer> */}

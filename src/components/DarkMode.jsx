@@ -3,6 +3,7 @@ import { FaRegMoon, FaRegSun } from 'react-icons/fa';
 
 const DarkMode = () => {
   const [darkModeActive, setDarkModeActive] = useState(true);
+  // var root = document.getElementsByTagName('html')[0];
   return darkModeActive ? (
     <FaRegMoon
       className='dark-mode-icon'

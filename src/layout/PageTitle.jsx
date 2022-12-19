@@ -5,7 +5,13 @@ const Title = styled.h1`
 `;
 
 const PageTitle = (props) => {
-  return <Title>&lt;{props.title}/&gt;</Title>;
+  return (
+    <Title>
+      <span className='purple'>&lt;</span>{' '}
+      <span className='white'>{props.title}</span>{' '}
+      <span className='purple'>/&gt;</span>
+    </Title>
+  );
 };
 
 export default PageTitle;

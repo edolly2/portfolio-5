@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import DarkMode from './DarkMode';
+// import DarkMode from './DarkMode';
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 0 2.4rem;
+  padding: 0 1.6rem;
 `;
 const Nav = styled.nav``;
 const NavList = styled.ul`
@@ -21,9 +21,10 @@ const DesktopNav = (props) => {
     <Container style={props.DesktopNavStyle}>
       <Nav>
         <NavList>
-          <DarkMode />
+          {/* <DarkMode /> */}
           <NavListItem>
             <NavLink
+              className='nav-link'
               style={{ marginLeft: '2.4rem' }}
               onClick={props.onNavLinkClick}
               to='/'
@@ -32,27 +33,47 @@ const DesktopNav = (props) => {
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/about'>
+            <NavLink
+              className='nav-link'
+              onClick={props.onNavLinkClick}
+              to='/about'
+            >
               About
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/skills'>
+            <NavLink
+              className='nav-link'
+              onClick={props.onNavLinkClick}
+              to='/skills'
+            >
               Skills
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/projects'>
+            <NavLink
+              className='nav-link'
+              onClick={props.onNavLinkClick}
+              to='/projects'
+            >
               Projects
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/contact'>
+            <NavLink
+              className='nav-link'
+              onClick={props.onNavLinkClick}
+              to='/contact'
+            >
               Contact
             </NavLink>
           </NavListItem>
           <NavListItem>
-            <NavLink onClick={props.onNavLinkClick} to='/blog'>
+            <NavLink
+              className='nav-link'
+              onClick={props.onNavLinkClick}
+              to='/blog'
+            >
               Blog
             </NavLink>
           </NavListItem>

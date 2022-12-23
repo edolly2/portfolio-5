@@ -78,7 +78,9 @@ const MobileMenu = (props) => {
         </MobileNavList>
       </MobileNav>
       <SocialContainer>
-        <FaGithub className='icon' />
+        <a href='https://github.com/edolly2'>
+          <FaGithub className='icon' />
+        </a>
         <FaLinkedinIn className='icon' />
         <FaFacebook className='icon' />
         <FaTwitter className='icon' />

@@ -10,7 +10,7 @@ const ProjectsPage = () => {
       <PageTitle title='My Work' />
       <ProjectsPageContainer>
         <h2>
-          <span className='purple'>//</span> Client Websites
+          <span className='purple'>//</span> Websites
         </h2>
         <h2>
           <span className='purple'>//</span> Blog

@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+:link,
+:visited,
+li,
+a {
+  text-decoration: none
+}
+
+ul,
+ol {
+  list-style: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code {
+  font-size: 1em;
+}
+
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+body,
+html,
+p,
+blockquote,
+fieldset,
+input {
+  margin: 0;
+  padding: 0
+}
+
+a img,
+:link img,
+:visited img {
+  border: none
+}
+
+address {
+  font-style: normal
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+}

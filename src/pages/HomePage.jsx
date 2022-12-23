@@ -9,10 +9,12 @@ const Wrapper = styled.div`
   width: 100%;
   justify-content: space-between;
   gap: 4.8rem;
-  @media screen and (max-width: 580px) {
+  /* max-height: 400px; */
+  @media screen and (max-width: 880px) {
     flex-direction: column;
     align-items: center;
     gap: 2.4rem;
+    /* max-height: auto; */
   }
 `;
 

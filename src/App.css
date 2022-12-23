@@ -28,6 +28,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   min-height: 100vh;
+  color: white;
 }
 
 
@@ -97,13 +98,15 @@ li {
 
 .nav-link {
   /* font-size: 32px; */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.active {
   cursor: pointer;
   transform: scale(1.1);
-  color: rgb(255, 255, 255);
+  color: #5C98D9;
+
 }
 
 /* .pad-sides {
@@ -120,7 +123,7 @@ li {
 }
 
 .purple {
-  color: #962371;
+  color: #5C98D9;
 }
 
 .white {

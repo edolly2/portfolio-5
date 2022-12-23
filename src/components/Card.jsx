@@ -13,6 +13,7 @@ const CardWrapper = styled.div`
   border-radius: 0.8rem;
   padding: 2.4rem;
   align-items: center;
+  justify-content: center;
   gap: 2.4rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
   background-color: rgba(119, 119, 119, 0.3);

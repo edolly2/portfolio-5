@@ -24,12 +24,16 @@ const SkillsPage = () => {
       <PageTitle title='Skills' />
       <SkillsContainer>
         <SkillsWrapper>
-          <h2>//Operating System</h2>
+          <h2>
+            <span className='purple'>//</span> Operating System
+          </h2>
           Linux
           <FaLinux />
         </SkillsWrapper>
         <SkillsWrapper>
-          <h2>//Main Skills</h2>
+          <h2>
+            <span className='purple'>//</span> Main Skills
+          </h2>
           HTML
           <FaHtml5 />
           CSS
@@ -42,7 +46,9 @@ const SkillsPage = () => {
           <FaNodeJs />
         </SkillsWrapper>
         <SkillsWrapper>
-          <h2>//Soft Skills</h2>
+          <h2>
+            <span className='purple'>//</span> Soft Skills
+          </h2>
           Php
           <SiPhp />
           Sass

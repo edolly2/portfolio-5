@@ -46,7 +46,9 @@ const AboutPage = () => {
           <MeImg src={MePose} alt='me' />
         </ImgContainer>
         <AboutPageContent>
-          <AboutPageContentTitle>//Who Am I?</AboutPageContentTitle>
+          <AboutPageContentTitle>
+            <span className='purple'>//</span> Who Am I?
+          </AboutPageContentTitle>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
           animi, eligendi et quibusdam quae porro, hic aliquid dolores tenetur
           facilis autem temporibus dignissimos harum magni? Voluptate blanditiis

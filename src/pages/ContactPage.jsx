@@ -98,7 +98,9 @@ const ContactPage = (props) => {
       {/* <ContactPageContainer> */}
       <PageTitle title='Get In Touch' />
       <Form onSubmit={handleSubmit}>
-        <FormHeader>//I Would Love to Hear From You</FormHeader>
+        <FormHeader>
+          <span className='purple'>//</span> I Would Love to Hear From You
+        </FormHeader>
         <FormGroup>
           <FormControl>
             <Label htmlFor='name'>Name</Label>

@@ -60,7 +60,9 @@ const Card = () => {
       <CardImg src={Headshot} alt='Full Stack Developer, Eric Dollinger' />
       <Line />
       <CardSocialWrapper>
-        <FaGithub className='icon' />
+        <a href='https://github.com/edolly2'>
+          <FaGithub className='icon' />
+        </a>
         <FaLinkedinIn className='icon' />
         <FaFacebook className='icon' />
         <FaTwitter className='icon' />

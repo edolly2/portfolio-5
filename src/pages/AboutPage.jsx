@@ -47,7 +47,7 @@ const AboutPage = () => {
         </ImgContainer>
         <AboutPageContent>
           <AboutPageContentTitle>
-            <span className='purple'>//</span> Who Am I?
+            <span className='primary'>//</span> Who Am I?
           </AboutPageContentTitle>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
           animi, eligendi et quibusdam quae porro, hic aliquid dolores tenetur

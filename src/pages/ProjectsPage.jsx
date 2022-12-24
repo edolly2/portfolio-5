@@ -10,22 +10,22 @@ const ProjectsPage = () => {
       <PageTitle title='My Work' />
       <ProjectsPageContainer>
         <h2>
-          <span className='purple'>//</span> Websites
+          <span className='primary'>//</span> Websites
         </h2>
         <h2>
-          <span className='purple'>//</span> Blog
+          <span className='primary'>//</span> Blog
         </h2>
         <h2>
-          <span className='purple'>//</span> EBooks
+          <span className='primary'>//</span> EBooks
         </h2>
         <h2>
-          <span className='purple'>//</span> Resources
+          <span className='primary'>//</span> Resources
         </h2>
         <h2>
-          <span className='purple'>//</span> Component Library
+          <span className='primary'>//</span> Component Library
         </h2>
         <h2>
-          <span className='purple'>//</span> For Fun
+          <span className='primary'>//</span> For Fun
         </h2>
       </ProjectsPageContainer>
     </Layout>

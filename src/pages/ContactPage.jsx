@@ -99,7 +99,7 @@ const ContactPage = (props) => {
       <PageTitle title='Get In Touch' />
       <Form onSubmit={handleSubmit}>
         <FormHeader>
-          <span className='purple'>//</span> I Would Love to Hear From You
+          <span className='primary'>//</span> I Would Love to Hear From You
         </FormHeader>
         <FormGroup>
           <FormControl>

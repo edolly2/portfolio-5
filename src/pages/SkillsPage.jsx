@@ -25,14 +25,14 @@ const SkillsPage = () => {
       <SkillsContainer>
         <SkillsWrapper>
           <h2>
-            <span className='purple'>//</span> Operating System
+            <span className='primary'>//</span> Operating System
           </h2>
           Linux
           <FaLinux />
         </SkillsWrapper>
         <SkillsWrapper>
           <h2>
-            <span className='purple'>//</span> Main Skills
+            <span className='primary'>//</span> Main Skills
           </h2>
           HTML
           <FaHtml5 />
@@ -47,7 +47,7 @@ const SkillsPage = () => {
         </SkillsWrapper>
         <SkillsWrapper>
           <h2>
-            <span className='purple'>//</span> Soft Skills
+            <span className='primary'>//</span> Soft Skills
           </h2>
           Php
           <SiPhp />

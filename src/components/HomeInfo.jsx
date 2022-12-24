@@ -34,8 +34,8 @@ const HomeInfo = () => {
   return (
     <Container>
       <HomeInfoTitle>
-        <span className='purple'>//</span>{' '}
-        <span className='white'>Web Developer</span>
+        <span className='primary'>//</span>{' '}
+        <span className='secondary'>Web Developer</span>
       </HomeInfoTitle>
       <HomeInfoContent>
         <HomeInfoList>
@@ -45,7 +45,8 @@ const HomeInfo = () => {
           <HomeInfoListItem>Title: Web Developer</HomeInfoListItem>
         </HomeInfoList>
         <HomeInfoParaTitle>
-          <span className='purple'>//</span> <span className='white'>Bio</span>
+          <span className='primary'>//</span>{' '}
+          <span className='secondary'>Bio</span>
         </HomeInfoParaTitle>
         <HomeInfoPara>
           I am a 31 year old Web Developer based out of Omaha, Nebraska. I

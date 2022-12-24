@@ -16,7 +16,7 @@ const CardWrapper = styled.div`
   justify-content: center;
   gap: 2.4rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.3);
+  background-color: rgba(119, 119, 119, 0.6);
   backdrop-filter: blur(5px);
   /* z-index: 1; */
   @media screen and (min-width: 426px) {
@@ -69,10 +69,10 @@ const Card = () => {
       </CardSocialWrapper>
       <BtnGroup>
         <NavLink to='/about'>
-          <Button text='Explore' />
+          <Button text='EXPLORE' />
         </NavLink>
         <NavLink to='/contact'>
-          <Button text='Contact' />
+          <Button text='CONTACT' />
         </NavLink>
       </BtnGroup>
     </CardWrapper>

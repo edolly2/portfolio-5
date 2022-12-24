@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
   gap: 2.4rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.3);
+  background-color: rgba(119, 119, 119, 0.6);
   backdrop-filter: blur(5px);
   /* z-index: 1; */
 `;

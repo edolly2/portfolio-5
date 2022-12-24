@@ -8,10 +8,12 @@ import SiteBrand from './SiteBrand';
 const Container = styled.header`
   position: relative;
   display: flex;
-  background-color: rgba(119, 119, 119, 0.5);
+  /* align-items: center; */
+  background-color: rgba(119, 119, 119, 0.6);
   backdrop-filter: blur(5px);
   padding: 0.8rem;
   z-index: 4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 `;
 
 // const Overlay = styled.div`

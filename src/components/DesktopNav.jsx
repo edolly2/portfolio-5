@@ -29,7 +29,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/'
             >
-              Home
+              HOME
             </NavLink>
           </NavListItem>
           <NavListItem>
@@ -38,7 +38,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/about'
             >
-              About
+              ABOUT
             </NavLink>
           </NavListItem>
           <NavListItem>
@@ -47,7 +47,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/skills'
             >
-              Skills
+              SKILLS
             </NavLink>
           </NavListItem>
           <NavListItem>
@@ -56,7 +56,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/projects'
             >
-              Projects
+              PROJECTS
             </NavLink>
           </NavListItem>
           <NavListItem>
@@ -65,7 +65,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/contact'
             >
-              Contact
+              CONTACT
             </NavLink>
           </NavListItem>
           <NavListItem>
@@ -74,7 +74,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/blog'
             >
-              Blog
+              BLOG
             </NavLink>
           </NavListItem>
         </NavList>

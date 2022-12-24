@@ -47,32 +47,32 @@ const MobileMenu = (props) => {
         <MobileNavList>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/'>
-              Home
+              HOME
             </NavLink>
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/about'>
-              About
+              ABOUT
             </NavLink>
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/skills'>
-              Skills
+              SKILLS
             </NavLink>
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/projects'>
-              Projects
+              PROJECTS
             </NavLink>
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/contact'>
-              Contact
+              CONTACT
             </NavLink>
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/blog'>
-              Blog
+              BLOG
             </NavLink>
           </MobileNavListItem>
         </MobileNavList>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
 import MePose from '../assets/me-pose3.png';
-import PaintStroke from '../assets/paint-stroke3.png';
+import PaintStroke from '../assets/paint-splash.png';
 
 const ImgContainer = styled.div`
   background-image: url(${PaintStroke});

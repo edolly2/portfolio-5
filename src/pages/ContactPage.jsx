@@ -11,7 +11,7 @@ const Form = styled.form`
   padding: 1.6rem;
 `;
 
-const FormHeader = styled.p`
+const FormHeader = styled.h3`
   text-align: center;
   margin-bottom: 2.4rem;
 `;
@@ -31,16 +31,24 @@ const FormGroup = styled.div`
 const FormControl = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 600px) {
     flex-direction: row;
     gap: 0.4rem;
   }
 `;
 
-const Label = styled.label``;
+const Label = styled.label`
+  color: #5c98d9;
+`;
 
 const Input = styled.input`
   padding: 0.4rem;
+  border: 2px solid transparent;
+  color: rgb(57, 15, 61);
+  &:focus {
+    border: 2px solid #5c98d9;
+  }
 `;
 
 const TextAreaWrapper = styled.div`
@@ -51,9 +59,14 @@ const TextAreaWrapper = styled.div`
 `;
 
 const TextArea = styled.textarea`
-  padding: 0.4rem;
+  padding: 0.8rem;
   max-width: 48rem;
   width: 100%;
+  border: 2px solid transparent;
+  color: rgb(57, 15, 61);
+  &:focus {
+    border: 2px solid #5c98d9;
+  }
 `;
 
 const BtnGroup = styled.div`
@@ -62,18 +75,19 @@ const BtnGroup = styled.div`
   gap: 1.6rem;
 
   @media screen and (min-width: 420px) {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-top: 1.6rem;
   }
 `;
 
 const ContactPage = (props) => {
-  const [status, setStatus] = useState('Submit');
+  const [status, setStatus] = useState('SUBMIT');
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Sending...');
+    setStatus('SENDING...');
     const { name, email, message } = e.target.elements;
     let details = {
       name: name.value,
@@ -87,7 +101,7 @@ const ContactPage = (props) => {
       },
       body: JSON.stringify(details),
     });
-    setStatus('Submit');
+    setStatus('SUBMIT');
     let result = await response.json();
     alert(result.status);
   };
@@ -103,7 +117,7 @@ const ContactPage = (props) => {
         </FormHeader>
         <FormGroup>
           <FormControl>
-            <Label htmlFor='name'>Name</Label>
+            <Label htmlFor='name'>NAME</Label>
             <Input
               type='text'
               name='name'
@@ -113,7 +127,7 @@ const ContactPage = (props) => {
             />
           </FormControl>
           <FormControl>
-            <Label htmlFor='email'>Email</Label>
+            <Label htmlFor='email'>EMAIL</Label>
             <Input
               type='email'
               name='email'
@@ -124,7 +138,7 @@ const ContactPage = (props) => {
           </FormControl>
         </FormGroup>
         <TextAreaWrapper>
-          <Label htmlFor='message'>Your Thoughts</Label>
+          <Label htmlFor='message'>YOUR THOUGHTS</Label>
           <TextArea
             name='message'
             id='message'
@@ -136,9 +150,9 @@ const ContactPage = (props) => {
         </TextAreaWrapper>
         <BtnGroup>
           <Button type='submit' text={status} />
-          {/* <NavLink to='/'> */}
-          <Button text='Cancel' />
-          {/* </NavLink> */}
+          <NavLink to='/'>
+            <Button text='CANCEL' />
+          </NavLink>
         </BtnGroup>
       </Form>
       {/* </ContactPageContainer> */}

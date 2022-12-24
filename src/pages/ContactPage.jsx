@@ -8,12 +8,23 @@ import SubmitModal from '../components/SubmitModal';
 import { useState } from 'react';
 
 const Form = styled.form`
-  padding: 1.6rem;
+  /* padding: 1.6rem; */
+  padding: 2.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  background-color: rgba(119, 119, 119, 0.6);
+  backdrop-filter: blur(5px);
+  /* width: 75%; */
+  max-width: 80rem;
+  margin: 0 auto;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
 `;
 
 const FormHeader = styled.h3`
   text-align: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 `;
 
 const FormGroup = styled.div`

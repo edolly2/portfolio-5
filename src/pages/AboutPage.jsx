@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
-import MePose from '../assets/me-pose3.png';
+import MePose from '../assets/me-pose.png';
 import PaintStroke from '../assets/paint-splash.png';
 
 const ImgContainer = styled.div`
@@ -34,7 +34,10 @@ const AboutPageContentTitle = styled.h2``;
 
 const AboutPageContent = styled.div`
   flex: 1;
-  padding: 1.6rem;
+  padding: 2.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  background-color: rgba(119, 119, 119, 0.6);
+  backdrop-filter: blur(5px);
 `;
 
 const AboutPage = () => {

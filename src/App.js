@@ -8,6 +8,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import Header from './components/Header';
 import Layout from './layout/Layout';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/projects' element={<ProjectsPage />} />
         <Route path='/contact' element={<ContactPage />} />
       </Routes>
+      <Footer />
     </Layout>
   );
 }

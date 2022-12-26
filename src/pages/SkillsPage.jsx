@@ -11,7 +11,12 @@ import {
 } from 'react-icons/fa';
 import { SiJavascript, SiPhp, SiMongodb } from 'react-icons/si';
 
-const SkillsContainer = styled.div``;
+const SkillsContainer = styled.div`
+  padding: 2.4rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  background-color: rgba(119, 119, 119, 0.6);
+  backdrop-filter: blur(5px);
+`;
 
 const SkillsWrapper = styled.div`
   display: flex;

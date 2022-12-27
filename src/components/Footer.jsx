@@ -72,22 +72,34 @@ const Footer = () => {
           <Underline />
           <ul>
             <FooterListItem>
-              <NavLink to='/'>HOME</NavLink>
+              <NavLink className='footer-link' to='/'>
+                HOME
+              </NavLink>
             </FooterListItem>
             <FooterListItem>
-              <NavLink to='/about'>ABOUT</NavLink>
+              <NavLink className='footer-link' to='/about'>
+                ABOUT
+              </NavLink>
             </FooterListItem>
             <FooterListItem>
-              <NavLink to='/skills'>SKILLS</NavLink>
+              <NavLink className='footer-link' to='/skills'>
+                SKILLS
+              </NavLink>
             </FooterListItem>
             <FooterListItem>
-              <NavLink to='/projects'>PROJECTS</NavLink>
+              <NavLink className='footer-link' to='/projects'>
+                PROJECTS
+              </NavLink>
             </FooterListItem>
             <FooterListItem>
-              <NavLink to='/contact'>CONTACT</NavLink>
+              <NavLink className='footer-link' to='/contact'>
+                CONTACT
+              </NavLink>
             </FooterListItem>
             <FooterListItem>
-              <NavLink to='/blog'>BLOG</NavLink>
+              <NavLink className='footer-link' to='/blog'>
+                BLOG
+              </NavLink>
             </FooterListItem>
           </ul>
         </div>
@@ -130,7 +142,9 @@ const Footer = () => {
           <Underline />
           <ul>
             <FooterListItem>
-              <NavLink to='/contact'>CONTACT</NavLink>
+              <NavLink className='footer-link' to='/contact'>
+                CONTACT
+              </NavLink>
             </FooterListItem>
             <FooterListItem>EMAIL</FooterListItem>
             <FooterListItem>ADDRESS</FooterListItem>

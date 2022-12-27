@@ -188,3 +188,12 @@ li {
 .secondary {
   color: white;
 }
+
+.footer-link {
+  color: white
+}
+
+.footer-link:hover {
+  color: #5C98D9;
+  cursor: pointer;
+}

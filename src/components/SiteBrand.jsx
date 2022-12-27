@@ -1,5 +1,5 @@
 import Logo from '../assets/my-logo.png';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 // const NavWrapper = styled.div`
 //   width: 100%;
@@ -17,12 +17,16 @@ const SiteBrandImg = styled.img`
   height: auto;
 `;
 
-const SiteBrand = () => {
+const SiteBrand = (props) => {
   return (
     <SiteBrandWrapper>
-      <NavLink className='h-center' to='/'>
-        <SiteBrandImg src={Logo} alt='Logo with the letters E and D' />
-      </NavLink>
+      <Link to='/'>
+        <SiteBrandImg
+          className={props.className}
+          src={Logo}
+          alt='Logo with the letters E and D'
+        />
+      </Link>
     </SiteBrandWrapper>
   );
 };

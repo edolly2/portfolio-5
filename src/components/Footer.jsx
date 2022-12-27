@@ -53,7 +53,15 @@ const FooterSocialGroup = styled.div`
   gap: 0.8rem;
 `;
 
+const CopyContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0.8rem;
+`;
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Container>
       <div style={{ display: 'flex', alignItems: 'center', gap: '3.6rem' }}>
@@ -163,11 +171,16 @@ const Footer = () => {
           </ul>
         </div>
       </ListsContainer>
-      <div>
+      <CopyContainer>
         <small>
-          <span className='secondary'>&copy;</span>Copyright
+          <span className='secondary'>&copy;</span>Copyright {currentYear}{' '}
+          <span className='primary'>
+            <a className='copy-text' href='https://www.ericdolly.com'>
+              www.EricDolly.com
+            </a>
+          </span>
         </small>
-      </div>
+      </CopyContainer>
     </Container>
   );
 };

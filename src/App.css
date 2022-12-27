@@ -189,6 +189,10 @@ li {
   color: white;
 }
 
+.accent {
+  color: rgb(57, 15, 61);
+}
+
 .footer-link {
   color: white
 }
@@ -196,4 +200,19 @@ li {
 .footer-link:hover {
   color: #5C98D9;
   cursor: pointer;
+}
+
+.loading-logo {
+  min-width: 25vw;
+  max-width: 50vw;
+  height: auto;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.copy-text {
+  margin-left: 0.8rem;
 }

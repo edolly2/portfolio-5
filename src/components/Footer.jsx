@@ -104,15 +104,21 @@ const Footer = () => {
                 </a>
               </FooterListItem>
               <FooterListItem>
-                <FaLinkedinIn className='icon' />
+                <a href='https://www.linkedin.com/in/eric-dollinger/'>
+                  <FaLinkedinIn className='icon' />
+                </a>
               </FooterListItem>
             </FooterSocialGroup>
             <FooterSocialGroup>
               <FooterListItem>
-                <FaFacebook className='icon' />
+                <a href='https://facebook.com/dev.dollinger/'>
+                  <FaFacebook className='icon' />
+                </a>
               </FooterListItem>
               <FooterListItem>
-                <FaTwitter className='icon' />
+                <a href='https://twitter.com/DevDollinger?t=GzpujD8mZUHrLaB_XnVMg&s=01'>
+                  <FaTwitter className='icon' />
+                </a>
               </FooterListItem>
             </FooterSocialGroup>
           </ul>

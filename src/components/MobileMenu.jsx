@@ -81,9 +81,15 @@ const MobileMenu = (props) => {
         <a href='https://github.com/edolly2'>
           <FaGithub className='icon' />
         </a>
-        <FaLinkedinIn className='icon' />
-        <FaFacebook className='icon' />
-        <FaTwitter className='icon' />
+        <a href='https://www.linkedin.com/in/eric-dollinger/'>
+          <FaLinkedinIn className='icon' />
+        </a>
+        <a href='https://facebook.com/dev.dollinger/'>
+          <FaFacebook className='icon' />
+        </a>
+        <a href='https://twitter.com/DevDollinger?t=GzpujD8mZUHrLaB_XnVMg&s=01'>
+          <FaTwitter className='icon' />
+        </a>
       </SocialContainer>
     </MenuContainer>
   );

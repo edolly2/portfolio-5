@@ -114,7 +114,9 @@ const Footer = () => {
           </h5>
           <Underline />
           <ul>
-            <FooterListItem>CONTACT</FooterListItem>
+            <FooterListItem>
+              <NavLink to='/contact'>CONTACT</NavLink>
+            </FooterListItem>
             <FooterListItem>EMAIL</FooterListItem>
             <FooterListItem>ADDRESS</FooterListItem>
             <FooterListItem>PHONE</FooterListItem>

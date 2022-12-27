@@ -18,6 +18,10 @@ const Container = styled.header`
   font-size: 1.2rem;
 `;
 
+const FooterTitle = styled.h4`
+  font-size: calc(26px + (36 - 26) * ((100vw - 360px) / (1920 - 360)));
+`;
+
 const ListsContainer = styled.div`
   display: flex;
   gap: 2.4rem;
@@ -36,6 +40,10 @@ const Underline = styled.div`
 
 const FooterListItem = styled.li`
   font-size: 1.2rem;
+  cursor: pointer;
+  &:hover {
+    color: #5c98d9;
+  }
 `;
 
 const FooterSocialGroup = styled.div`
@@ -50,9 +58,10 @@ const Footer = () => {
     <Container>
       <div style={{ display: 'flex', alignItems: 'center', gap: '3.6rem' }}>
         <SiteBrand />
-        <h4>
-          <span className='primary'>//</span> THANKS FOR VISITING
-        </h4>
+        <FooterTitle>
+          <span className='primary'>&lt;</span> THANKS FOR VISITING{' '}
+          <span className='primary'>/&gt;</span>
+        </FooterTitle>
       </div>
       <Underline />
       <ListsContainer>

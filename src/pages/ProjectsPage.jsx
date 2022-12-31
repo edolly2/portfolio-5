@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
 import { BsFillCaretRightFill } from 'react-icons/bs';
+// import Example from '../assets/example.jpg';
 
 const ProjectsPageContainer = styled.div`
   padding: 2.4rem;
@@ -27,11 +28,14 @@ const ProjectSectionContent = styled.div`
 const SectionWrapper = styled.div`
   flex: 1;
   min-width: 10vw;
-  min-height: 10vh;
+  max-height: 10vh;
   background-color: white;
+  overflow: none;
   @media screen and (min-width: 768px) {
     min-width: 20rem;
+    /* max-width: 20rem; */
     min-height: 10rem;
+    /* max-height: 10rem; */
   }
 `;
 
@@ -59,7 +63,9 @@ const ProjectsPage = () => {
             <span className='primary'>//</span> Websites
           </ProjectSectionTitle>
           <ProjectSectionContent>
-            <SectionWrapper></SectionWrapper>
+            <SectionWrapper>
+              {/* <img src={Example} alt='example' /> */}
+            </SectionWrapper>
             <SectionWrapper></SectionWrapper>
             <SectionWrapper></SectionWrapper>
           </ProjectSectionContent>

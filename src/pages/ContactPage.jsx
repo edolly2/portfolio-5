@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 import PageTitle from '../layout/PageTitle';
 import Layout from '../layout/Layout';
+import { useFormik } from 'formik';
 import HomePage from './HomePage';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import SubmitModal from '../components/SubmitModal';
@@ -51,6 +52,7 @@ const FormControl = styled.div`
 
 const Label = styled.label`
   color: #5c98d9;
+  /* align-self: flex-start; */
 `;
 
 const Input = styled.input`
@@ -94,35 +96,62 @@ const BtnGroup = styled.div`
   }
 `;
 
-const ContactPage = (props) => {
-  const [status, setStatus] = useState('SUBMIT');
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('SENDING...');
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch('http://localhost:5000/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus('SUBMIT');
-    let result = await response.json();
-    alert(result.status);
-  };
+const validate = (values) => {
+  const errors = {};
+  if (!values.name) {
+    errors.name = 'Required';
+  } else if (values.name.length > 15) {
+    errors.name = 'Must be 15 characters or less';
+  }
+  if (!values.email) {
+    errors.email = 'Required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address';
+  }
+  return errors;
+};
+
+const ContactPage = () => {
+  // const [status, setStatus] = useState('SUBMIT');
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setStatus('SENDING...');
+  //   const { name, email, message } = e.target.elements;
+  //   let details = {
+  //     name: name.value,
+  //     email: email.value,
+  //     message: message.value,
+  //   };
+  //   let response = await fetch('http://localhost:5000/contact', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify(details),
+  //   });
+  //   setStatus('SUBMIT');
+  //   let result = await response.json();
+  //   alert(result.status);
+  // };
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   return (
     <Layout>
       {/* <SubmitModal style={{ display: isSubmitActive ? 'flex' : 'none' }} /> */}
       {/* <ContactPageContainer> */}
       <PageTitle title='Get In Touch' />
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={formik.handleSubmit}>
         <FormHeader>
           <span className='primary'>//</span> I Would Love to Hear From You
         </FormHeader>
@@ -133,9 +162,12 @@ const ContactPage = (props) => {
               type='text'
               name='name'
               id='name'
-              required
+              // required
               placeholder='Full Name'
+              onChange={formik.handleChange}
+              value={formik.values.name}
             />
+            {formik.errors.name ? <div>{formik.errors.name}</div> : null}
           </FormControl>
           <FormControl>
             <Label htmlFor='email'>EMAIL</Label>
@@ -143,9 +175,12 @@ const ContactPage = (props) => {
               type='email'
               name='email'
               id='email'
-              required
+              // required
               placeholder='Example@email.com'
+              onChange={formik.handleChange}
+              value={formik.values.email}
             />
+            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
           </FormControl>
         </FormGroup>
         <TextAreaWrapper>
@@ -153,14 +188,16 @@ const ContactPage = (props) => {
           <TextArea
             name='message'
             id='message'
-            required
+            // required
             rows={10}
             // cols={30}
             placeholder='Thank you for showing interest in my portfolio.'
+            onChange={formik.handleChange}
+            value={formik.values.message}
           />
         </TextAreaWrapper>
         <BtnGroup>
-          <Button type='submit' text={status} />
+          <Button type='submit' text='Submit' />
           <NavLink to='/'>
             <Button text='CANCEL' />
           </NavLink>

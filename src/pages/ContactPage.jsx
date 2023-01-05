@@ -87,7 +87,7 @@ const BtnGroup = styled.div`
   flex-direction: column;
   gap: 1.6rem;
 
-  @media screen and (min-width: 420px) {
+  @media screen and (min-width: 360px) {
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -197,7 +197,7 @@ const ContactPage = () => {
           />
         </TextAreaWrapper>
         <BtnGroup>
-          <Button type='submit' text='Submit' />
+          <Button type='submit' text='SUBMIT' />
           <NavLink to='/'>
             <Button text='CANCEL' />
           </NavLink>

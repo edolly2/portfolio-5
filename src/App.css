@@ -216,3 +216,12 @@ li {
 .copy-text {
   margin-left: 0.8rem;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.show {
+  margin-left: 0.4rem;
+}

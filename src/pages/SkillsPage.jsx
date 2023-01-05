@@ -10,6 +10,7 @@ import {
   FaLinux,
 } from 'react-icons/fa';
 import { SiJavascript, SiPhp, SiMongodb } from 'react-icons/si';
+import { BsFillCaretRightFill } from 'react-icons/bs';
 
 const SkillsContainer = styled.div`
   padding: 2.4rem;
@@ -23,6 +24,29 @@ const SkillsWrapper = styled.div`
   flex-direction: column;
 `;
 
+const WrapperOne = styled.div`
+  display: flex;
+  /* gap: 1.6rem; */
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin: 1.6rem 0;
+`;
+
+const WrapperTwo = styled.div``;
+
+const Span = styled.span`
+  font-size: 1.2rem;
+  font-style: none;
+  color: #5c98d9;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    color: rgb(57, 15, 61);
+  }
+`;
+
 const SkillsPage = () => {
   return (
     <Layout>
@@ -32,34 +56,107 @@ const SkillsPage = () => {
           <h2>
             <span className='primary'>//</span> Operating System
           </h2>
-          Linux
-          <FaLinux />
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              Linux
+              <FaLinux />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
         </SkillsWrapper>
         <SkillsWrapper>
           <h2>
             <span className='primary'>//</span> Main Skills
           </h2>
-          HTML
-          <FaHtml5 />
-          CSS
-          <FaCss3Alt />
-          JavaScript
-          <SiJavascript />
-          ReactJS
-          <FaReact />
-          NodeJS
-          <FaNodeJs />
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              HTML
+              <FaHtml5 />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              CSS
+              <FaCss3Alt />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              JavaScript
+              <SiJavascript />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              ReactJS
+              <FaReact />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              NodeJS
+              <FaNodeJs />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
         </SkillsWrapper>
         <SkillsWrapper>
           <h2>
             <span className='primary'>//</span> Soft Skills
           </h2>
-          Php
-          <SiPhp />
-          Sass
-          <FaSass />
-          MongoDB
-          <SiMongodb />
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              Php
+              <SiPhp />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              Sass
+              <FaSass />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+          <WrapperOne>
+            <WrapperTwo className='center'>
+              MongoDB
+              <SiMongodb />
+            </WrapperTwo>
+            <Span>
+              See More <BsFillCaretRightFill />
+            </Span>
+          </WrapperOne>
+        </SkillsWrapper>
+        <SkillsWrapper>
+          <h2>
+            <span className='primary'>//</span> Education
+          </h2>
+        </SkillsWrapper>
+        <SkillsWrapper>
+          <h2>
+            <span className='primary'>//</span> Certifications
+          </h2>
         </SkillsWrapper>
       </SkillsContainer>
     </Layout>

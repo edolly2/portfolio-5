@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 import PageTitle from '../layout/PageTitle';
 import Layout from '../layout/Layout';
-import { useFormik } from 'formik';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 import HomePage from './HomePage';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import SubmitModal from '../components/SubmitModal';
@@ -58,18 +59,18 @@ const Label = styled.label`
 
 const Input = styled.input`
   padding: 0.4rem;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   color: rgb(57, 15, 61);
-  &:focus {
+  /* &:focus {
     border: 2px solid #5c98d9;
-  }
+  } */
 `;
 
 const TextAreaWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3.6rem 0;
+  margin: 2.4rem 0;
 `;
 
 const TextArea = styled.textarea`
@@ -97,20 +98,28 @@ const BtnGroup = styled.div`
   }
 `;
 
-const validate = (values) => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = 'Required';
-  } else if (values.name.length > 15) {
-    errors.name = 'Must be 15 characters or less';
-  }
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
-  return errors;
-};
+const Transparent = styled.div`
+  color: transparent;
+`;
+
+const Error = styled.div`
+  color: red;
+`;
+
+// const validate = (values) => {
+//   const errors = {};
+//   if (!values.name) {
+//     errors.name = 'Required';
+//   } else if (values.name.length > 15) {
+//     errors.name = 'Must be 15 characters or less';
+//   }
+//   if (!values.email) {
+//     errors.email = 'Required';
+//   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+//     errors.email = 'Invalid email address';
+//   }
+//   return errors;
+// };
 
 const ContactPage = () => {
   // const [status, setStatus] = useState('SUBMIT');
@@ -135,81 +144,126 @@ const ContactPage = () => {
   //   alert(result.status);
   // };
 
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
-    validate,
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
+  // const formik = useFormik({
+  //   initialValues: {
+  //     name: '',
+  //     email: '',
+  //     message: '',
+  //   },
+  //   validate,
+  //   onSubmit: (values) => {
+  //     alert(JSON.stringify(values, null, 2));
+  //   },
+  // });
 
   return (
-    <Layout>
-      {/* <SubmitModal style={{ display: isSubmitActive ? 'flex' : 'none' }} /> */}
-      {/* <ContactPageContainer> */}
-      <PageTitle title='Get In Touch' />
-      <Form onSubmit={formik.handleSubmit}>
-        <FormHeader>
-          <span className='primary'>//</span> I Would Love to Hear From You
-        </FormHeader>
-        <FormGroup>
-          <FormControl>
-            <Label htmlFor='name'>NAME</Label>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <Input
-                type='text'
-                name='name'
-                id='name'
+    <Formik
+      initialValues={{ name: '', email: '', message: '' }}
+      validationSchema={Yup.object({
+        name: Yup.string()
+          .max(15, 'Must be 15 characters or less')
+          .required('Required'),
+        email: Yup.string().email('Invalid email address').required('Required'),
+        message: Yup.string()
+        .required('You must write a message'),
+      })}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
+    >
+      {(formik) => (
+        <Layout>
+          {/* <SubmitModal style={{ display: isSubmitActive ? 'flex' : 'none' }} /> */}
+          {/* <ContactPageContainer> */}
+          <PageTitle title='Get In Touch' />
+          <Form onSubmit={formik.handleSubmit}>
+            <FormHeader>
+              <span className='primary'>//</span> I Would Love to Hear From You
+            </FormHeader>
+            <FormGroup>
+              <FormControl>
+                <Label htmlFor='name'>NAME</Label>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <Input
+                    id='name'
+                    type='text'
+                    {...formik.getFieldProps('name')}
+                    // required
+                    placeholder='Full Name'
+                    // onChange={formik.handleChange}
+                    // onBlur={formik.handleBlur}
+                    // value={formik.values.name}
+                    className={
+                      formik.errors.name ? 'errorStyle' : 'normalStyle'
+                    }
+                  />
+                  {formik.touched.name && formik.errors.name ? (
+                    <Error>{formik.errors.name}</Error>
+                  ) : (
+                    <Transparent>Words</Transparent>
+                  )}
+                </div>
+              </FormControl>
+              <FormControl>
+                <Label htmlFor='email'>EMAIL</Label>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <Input
+                    id='email'
+                    type='email'
+                    {...formik.getFieldProps('email')}
+                    // name='email'
+                    // required
+                    placeholder='Example@email.com'
+                    // onChange={formik.handleChange}
+                    // onBlur={formik.handleBlur}
+                    // value={formik.values.email}
+                    className={
+                      formik.errors.email ? 'errorStyle' : 'normalStyle'
+                    }
+                  />
+                  {formik.touched.email && formik.errors.email ? (
+                    <Error>{formik.errors.email}</Error>
+                  ) : (
+                    <Transparent>Words</Transparent>
+                  )}
+                </div>
+              </FormControl>
+            </FormGroup>
+            <TextAreaWrapper>
+              <Label htmlFor='message'>YOUR THOUGHTS</Label>
+              <TextArea
+                id='message'
+                // name='message'
+                {...formik.getFieldProps('message')}
                 // required
-                placeholder='Full Name'
-                onChange={formik.handleChange}
-                value={formik.values.name}
+                rows={10}
+                // cols={30}
+                placeholder='Thank you for showing interest in my portfolio.'
+                // onChange={formik.handleChange}
+                // onBlur={formik.handleBlur}
+                // value={formik.values.message}
+                className={formik.errors.message ? 'errorStyle' : 'normalStyle'}
               />
-              {formik.errors.name ? <div>{formik.errors.name}</div> : null}
-            </div>
-          </FormControl>
-          <FormControl>
-            <Label htmlFor='email'>EMAIL</Label>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <Input
-                type='email'
-                name='email'
-                id='email'
-                // required
-                placeholder='Example@email.com'
-                onChange={formik.handleChange}
-                value={formik.values.email}
-              />
-              {formik.errors.email ? <div>{formik.errors.email}</div> : null}
-            </div>
-          </FormControl>
-        </FormGroup>
-        <TextAreaWrapper>
-          <Label htmlFor='message'>YOUR THOUGHTS</Label>
-          <TextArea
-            name='message'
-            id='message'
-            // required
-            rows={10}
-            // cols={30}
-            placeholder='Thank you for showing interest in my portfolio.'
-            onChange={formik.handleChange}
-            value={formik.values.message}
-          />
-        </TextAreaWrapper>
-        <BtnGroup>
-          <Button type='submit' text='SUBMIT' />
-          <NavLink to='/'>
-            <Button text='CANCEL' />
-          </NavLink>
-        </BtnGroup>
-      </Form>
-      {/* </ContactPageContainer> */}
-    </Layout>
+              {formik.touched.message && formik.errors.message ? (
+                <Error>{formik.errors.message}</Error>
+              ) : (
+                <Transparent>Words</Transparent>
+              )}
+            </TextAreaWrapper>
+            <BtnGroup>
+              <Button type='submit' text='SUBMIT' />
+              <NavLink to='/'>
+                <Button text='CANCEL' />
+              </NavLink>
+            </BtnGroup>
+          </Form>
+          {/* </ContactPageContainer> */}
+        </Layout>
+      )}
+    </Formik>
   );
 };
 

@@ -225,3 +225,19 @@ li {
 .show {
   margin-left: 0.4rem;
 }
+
+.errorStyle {
+  border: 2px solid red;
+}
+
+.errorStyle:focus {
+  border: 2px solid red;
+}
+
+.normalStyle {
+  border: 2px solid transparent;
+}
+
+.normalStyle:focus {
+  border: 2px solid #5c98d9;
+}

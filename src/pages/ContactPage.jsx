@@ -43,7 +43,8 @@ const FormGroup = styled.div`
 const FormControl = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+
   @media screen and (min-width: 600px) {
     flex-direction: row;
     gap: 0.4rem;
@@ -158,29 +159,33 @@ const ContactPage = () => {
         <FormGroup>
           <FormControl>
             <Label htmlFor='name'>NAME</Label>
-            <Input
-              type='text'
-              name='name'
-              id='name'
-              // required
-              placeholder='Full Name'
-              onChange={formik.handleChange}
-              value={formik.values.name}
-            />
-            {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <Input
+                type='text'
+                name='name'
+                id='name'
+                // required
+                placeholder='Full Name'
+                onChange={formik.handleChange}
+                value={formik.values.name}
+              />
+              {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+            </div>
           </FormControl>
           <FormControl>
             <Label htmlFor='email'>EMAIL</Label>
-            <Input
-              type='email'
-              name='email'
-              id='email'
-              // required
-              placeholder='Example@email.com'
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
-            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <Input
+                type='email'
+                name='email'
+                id='email'
+                // required
+                placeholder='Example@email.com'
+                onChange={formik.handleChange}
+                value={formik.values.email}
+              />
+              {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+            </div>
           </FormControl>
         </FormGroup>
         <TextAreaWrapper>

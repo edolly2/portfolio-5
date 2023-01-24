@@ -13,6 +13,7 @@ const PageLayout = styled.div`
   padding: 1.6rem;
   min-height: 85vh;
   /* min-height: 100%; */
+  overflow: hidden;
 `;
 
 const Layout = ({ children }) => {

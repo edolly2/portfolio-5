@@ -30,9 +30,9 @@ const HomeInfoParaTitle = styled.h3`
 
 const HomeInfoPara = styled.p``;
 
-const HomeInfo = () => {
+const HomeInfo = (props) => {
   return (
-    <Container>
+    <Container className={props.className}>
       <HomeInfoTitle>
         <span className='primary'>//</span>{' '}
         <span className='secondary'>Web Developer</span>

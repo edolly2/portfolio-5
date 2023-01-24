@@ -22,8 +22,12 @@ const Btn = styled.button`
   }
 `;
 
-const Button = ({ color, text }) => {
-  return <Btn className={`${color}`}>{text}</Btn>;
+const Button = ({ color, text, disabled }) => {
+  return (
+    <Btn className={`${color}`} disabled={disabled}>
+      {text}
+    </Btn>
+  );
 };
 
 export default Button;

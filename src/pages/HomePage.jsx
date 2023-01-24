@@ -23,8 +23,8 @@ const HomePage = () => {
     <Layout>
       <PageTitle title='Eric Dollinger' />
       <Wrapper>
-        <Card />
-        <HomeInfo />
+        <Card className='card' />
+        <HomeInfo className='home-info' />
       </Wrapper>
     </Layout>
   );

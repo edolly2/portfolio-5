@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
 import { BsFillCaretRightFill } from 'react-icons/bs';
-// import Example from '../assets/example.jpg';
+import TinDog from '../assets/tin-dog-project-img.png';
+import { useState } from 'react';
 
 const ProjectsPageContainer = styled.div`
   padding: 2.4rem;
@@ -30,12 +31,47 @@ const SectionWrapper = styled.div`
   min-width: 10vw;
   max-height: 10vh;
   background-color: white;
-  overflow: none;
+  overflow: hidden;
+  position: relative;
   @media screen and (min-width: 768px) {
     min-width: 20rem;
     /* max-width: 20rem; */
     min-height: 10rem;
     /* max-height: 10rem; */
+  }
+`;
+
+const ProjectImg = styled.img`
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const ProjectImgOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    display: none;
+  }
+  /* display: none; */
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    /* display: block; */
+    h2 {
+      display: block;
+    }
   }
 `;
 
@@ -54,6 +90,13 @@ const ViewAll = styled.a`
 `;
 
 const ProjectsPage = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovering(true);
+  };
   return (
     <Layout>
       <PageTitle title='My Work' />
@@ -64,7 +107,19 @@ const ProjectsPage = () => {
           </ProjectSectionTitle>
           <ProjectSectionContent>
             <SectionWrapper>
-              {/* <img src={Example} alt='example' /> */}
+              <ProjectImgOverlay
+                style={{ display: isHovering ? 'flex' : 'none' }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <h2>VIEW</h2>
+              </ProjectImgOverlay>
+              <ProjectImg
+                src={TinDog}
+                alt='#'
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
             </SectionWrapper>
             <SectionWrapper></SectionWrapper>
             <SectionWrapper></SectionWrapper>

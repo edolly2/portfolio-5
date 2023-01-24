@@ -156,6 +156,14 @@ const ContactPage = () => {
   //   },
   // });
 
+  // const isDisabled = () => {
+  //   if (formik.errors.name || formik.errors.email || formik.errors.message) {
+  //     return 'disabled';
+  //   } else {
+  //     return null;
+  //   }
+  // };
+  const [isDisabled, setIsDisabled] = useState(true);
   return (
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
@@ -164,8 +172,7 @@ const ContactPage = () => {
           .max(15, 'Must be 15 characters or less')
           .required('Required'),
         email: Yup.string().email('Invalid email address').required('Required'),
-        message: Yup.string()
-        .required('You must write a message'),
+        message: Yup.string().required('You must write a message'),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -254,7 +261,19 @@ const ContactPage = () => {
               )}
             </TextAreaWrapper>
             <BtnGroup>
-              <Button type='submit' text='SUBMIT' />
+              <button
+                type='submit'
+                text='SUBMIT'
+                disabled={
+                  formik.errors.name ||
+                  formik.errors.email ||
+                  formik.errors.message
+                    ? true
+                    : false
+                }
+              >
+                SUBMIT
+              </button>
               <NavLink to='/'>
                 <Button text='CANCEL' />
               </NavLink>

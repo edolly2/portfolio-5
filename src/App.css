@@ -241,3 +241,11 @@ li {
 .normalStyle:focus {
   border: 2px solid #5c98d9;
 }
+
+:disabled {
+  background-color: black;
+}
+
+.card {}
+
+.home-info {}

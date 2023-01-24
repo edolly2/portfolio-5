@@ -54,9 +54,9 @@ const BtnGroup = styled.div`
   }
 `;
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <CardWrapper>
+    <CardWrapper className={props.className}>
       <CardImg src={Headshot} alt='Full Stack Developer, Eric Dollinger' />
       <Line />
       <CardSocialWrapper>

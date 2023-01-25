@@ -10,7 +10,7 @@ const PageLayout = styled.div`
   max-width: 1080px;
   margin: 0 auto;
   /* padding: 2.4rem; */
-  padding: 1.6rem;
+  padding: 1.6rem 0;
   min-height: 85vh;
   /* min-height: 100%; */
   overflow: hidden;

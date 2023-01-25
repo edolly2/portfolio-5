@@ -128,16 +128,7 @@ const ProjectsPage = () => {
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
         </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionTitle>
-            <span className='primary'>//</span> Blog
-          </ProjectSectionTitle>
-          <ProjectSectionContent>
-            <SectionWrapper></SectionWrapper>
-            <SectionWrapper></SectionWrapper>
-            <SectionWrapper></SectionWrapper>
-          </ProjectSectionContent>
-        </ProjectSection>
+
         <ProjectSection>
           <ProjectSectionTitle>
             <span className='primary'>//</span> EBooks
@@ -189,6 +180,16 @@ const ProjectsPage = () => {
           <ViewAll href='#'>
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
+        </ProjectSection>
+        <ProjectSection>
+          <ProjectSectionTitle>
+            <span className='primary'>//</span> Blog
+          </ProjectSectionTitle>
+          <ProjectSectionContent>
+            <SectionWrapper></SectionWrapper>
+            <SectionWrapper></SectionWrapper>
+            <SectionWrapper></SectionWrapper>
+          </ProjectSectionContent>
         </ProjectSection>
       </ProjectsPageContainer>
     </Layout>

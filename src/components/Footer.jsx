@@ -13,7 +13,7 @@ const Container = styled.header`
   backdrop-filter: blur(5px);
   padding: 2.4rem;
   z-index: 4;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), 2px -2px 5px rgba(0, 0, 0, 0.7);
   margin-top: 6.4rem;
   font-size: 1.2rem;
 `;

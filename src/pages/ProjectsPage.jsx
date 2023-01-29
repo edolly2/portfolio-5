@@ -3,6 +3,7 @@ import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
 import { BsFillCaretRightFill } from 'react-icons/bs';
 import TinDog from '../assets/tin-dog-project-img.png';
+import Paco from '../assets/paco.png';
 import { useState } from 'react';
 
 const ProjectsPageContainer = styled.div`
@@ -121,7 +122,21 @@ const ProjectsPage = () => {
                 onMouseLeave={handleMouseLeave}
               />
             </SectionWrapper>
-            <SectionWrapper></SectionWrapper>
+            <SectionWrapper>
+              <ProjectImgOverlay
+                style={{ display: isHovering ? 'flex' : 'none' }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <h2>VIEW</h2>
+              </ProjectImgOverlay>
+              <ProjectImg
+                src={Paco}
+                alt='#'
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            </SectionWrapper>
             <SectionWrapper></SectionWrapper>
           </ProjectSectionContent>
           <ViewAll href='#'>

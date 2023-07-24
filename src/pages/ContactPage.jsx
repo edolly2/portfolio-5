@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import HomePage from './HomePage';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import SubmitModal from '../components/SubmitModal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Form = styled.form`
   /* padding: 1.6rem; */
@@ -163,7 +163,16 @@ const ContactPage = () => {
   //     return null;
   //   }
   // };
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState();
+  // let formik;
+  // useEffect(() => {
+  //   if (formik.errors.name || formik.errors.email || formik.errors.message)
+  //     setIsDisabled(true);
+  //   else {
+  //     setIsDisabled(false);
+  //   }
+  // }, []);
+
   return (
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
@@ -262,9 +271,12 @@ const ContactPage = () => {
             </TextAreaWrapper>
             <BtnGroup>
               <button
+                className='btn'
                 type='submit'
                 text='SUBMIT'
+                id='theButton'
                 disabled={
+                  isDisabled ||
                   formik.errors.name ||
                   formik.errors.email ||
                   formik.errors.message

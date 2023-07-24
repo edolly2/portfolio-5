@@ -5,6 +5,7 @@ import { BsFillCaretRightFill } from 'react-icons/bs';
 import TinDog from '../assets/tin-dog-project-img.png';
 import Paco from '../assets/paco.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectsPageContainer = styled.div`
   padding: 2.4rem;
@@ -78,7 +79,7 @@ const ProjectImgOverlay = styled.div`
 
 const ViewAll = styled.a`
   margin-top: 1.6rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: none;
   color: #5c98d9;
   display: flex;
@@ -139,9 +140,11 @@ const ProjectsPage = () => {
             </SectionWrapper>
             <SectionWrapper></SectionWrapper>
           </ProjectSectionContent>
-          <ViewAll href='#'>
-            VIEW ALL <BsFillCaretRightFill />
-          </ViewAll>
+          <Link to='/projects/all-websites'>
+            <ViewAll href='#'>
+              VIEW ALL <BsFillCaretRightFill />
+            </ViewAll>
+          </Link>
         </ProjectSection>
 
         <ProjectSection>

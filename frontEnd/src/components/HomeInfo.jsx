@@ -39,10 +39,18 @@ const HomeInfo = (props) => {
       </HomeInfoTitle>
       <HomeInfoContent>
         <HomeInfoList>
-          <HomeInfoListItem>Name: Eric Dollinger</HomeInfoListItem>
-          <HomeInfoListItem>From: Omaha, Nebraska</HomeInfoListItem>
-          <HomeInfoListItem>Age: 31</HomeInfoListItem>
-          <HomeInfoListItem>Title: Web Developer</HomeInfoListItem>
+          <HomeInfoListItem>
+            <span className='blue'>Name:</span> Eric Dollinger
+          </HomeInfoListItem>
+          <HomeInfoListItem>
+            <span className='blue'>From:</span> Omaha, Nebraska
+          </HomeInfoListItem>
+          <HomeInfoListItem>
+            <span className='blue'>Age:</span> 31
+          </HomeInfoListItem>
+          <HomeInfoListItem>
+            <span className='blue'>Title:</span> Web Developer
+          </HomeInfoListItem>
         </HomeInfoList>
         <HomeInfoParaTitle>
           <span className='primary'>{'//'}</span>{' '}

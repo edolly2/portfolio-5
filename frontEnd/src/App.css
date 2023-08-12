@@ -118,6 +118,30 @@ video {
 /* ----GLOBAL---- */
 /* -------------- */
 
+:root {
+
+  /* * PADDING * */
+  --padding-all {
+    padding: 0.4rem;
+  }
+
+  --padding-right {
+    padding-right: 0.4rem;
+  }
+
+  --padding-left {
+    padding-right: 0.4rem;
+  }
+
+  --padding-bottom {
+    padding-right: 0.4rem;
+  }
+
+  --padding-top {
+    padding-right: 0.4rem;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -147,6 +171,10 @@ body,
 h5,
 li {
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.blue {
+  color: #5C98D9;
 }
 
 .icon {

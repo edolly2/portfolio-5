@@ -35,13 +35,16 @@ const SubmitModalTitle = styled.h3`
 const SubmitModaltext = styled.p``;
 // const SubmitModalOverlay = styled.div``;
 // const SubmitModalOverlay = styled.div``;
+const SubmitModalButton = styled.button``;
 
 const SubmitModal = (props) => {
   return (
     <SubmitModalOverlay style={props.style}>
       <SubmitModalContainer>
         <SubmitModalContent>
-          <SubmitModalTitle>I Appreciate For Your Interest</SubmitModalTitle>
+          <SubmitModalTitle>
+            I Appreciate For Your Interest {props.senderName}!
+          </SubmitModalTitle>
           <div>
             <SubmitModaltext>
               Your message has been sent to Eric Dollinger.
@@ -52,6 +55,7 @@ const SubmitModal = (props) => {
             <SubmitModaltext style={{ marginTop: '1.6rem' }}>
               Thank you.
             </SubmitModaltext>
+            <SubmitModalButton onClick={props.onClick}>OK</SubmitModalButton>
           </div>
         </SubmitModalContent>
       </SubmitModalContainer>

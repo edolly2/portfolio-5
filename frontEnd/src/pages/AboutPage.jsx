@@ -2,16 +2,16 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import Layout from '../layout/Layout';
 import PageTitle from '../layout/PageTitle';
-import MePose from '../assets/me-pose.png';
-import PaintStroke from '../assets/paint-splash.png';
+import MePose from '../assets/profile-picture-pose.png';
+// import PaintStroke from '../assets/paint-splash.png';
 // import { FaLinkedinIn } from 'react-icons/fa';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 
+/* background-image: url(${PaintStroke}); */
 const ImgContainer = styled.div`
-  background-image: url(${PaintStroke});
-  background-repeat: no-repeat;
-  background-size: 20rem;
-  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background-size: 20rem; */
+  /* background-position: center; */
   /* background-position: top 5% left; */
   /* min-height: 100vh; */
   /* min-width: 100vw; */
@@ -21,7 +21,9 @@ const ImgContainer = styled.div`
 `;
 
 const MeImg = styled.img`
-  width: 200px;
+  /* width: 200px; */
+  width: 50vw;
+  max-width: 395px;
   height: auto;
 `;
 

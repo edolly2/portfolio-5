@@ -35,7 +35,6 @@ const SubmitModalTitle = styled.h3`
 const SubmitModaltext = styled.p``;
 // const SubmitModalOverlay = styled.div``;
 // const SubmitModalOverlay = styled.div``;
-const SubmitModalButton = styled.button``;
 
 const SubmitModal = (props) => {
   return (
@@ -55,7 +54,6 @@ const SubmitModal = (props) => {
             <SubmitModaltext style={{ marginTop: '1.6rem' }}>
               Thank you.
             </SubmitModaltext>
-            <SubmitModalButton onClick={props.onClick}>OK</SubmitModalButton>
           </div>
         </SubmitModalContent>
       </SubmitModalContainer>

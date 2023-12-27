@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import SubmitModal from './SubmitModal';
+import { Routes, Route, NavLink, useNavigate } from 'react-router-dom';
+import DOMPurify from 'dompurify';
+// import SubmitModal from './SubmitModal';
 
 const Form = styled.form`
   /* padding: 1.6rem; */
@@ -118,27 +119,30 @@ const Error = styled.div`
 `;
 
 const ContactForm = () => {
-  const [formValid, setFormValid] = useState(false);
-  const [nameValue, setNameValue] = useState('');
-  const [emailValue, setEmailValue] = useState('');
-  const [referrerValue, setReferrerValue] = useState('');
-  const [messageValue, setMessageValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [sanitizedInput, setSanitizedInput] = useState('');
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const handleInputChange = (event) => {
+    const userInput = event.target.value;
+    setInputValue(userInput);
 
-    const form = e.target;
-    const formData = new FormData(form);
+    const sanitizedUserInput = DOMPurify.sanitize(userInput);
+    setSanitizedInput(sanitizedUserInput);
+  };
 
-    const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
-    console.log([...formData.entries()]);
-    setFormValid(!formValid);
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const { name, email, message } = formData;
 
+  //   if (!name || !email || !message) {
+  //     alert('Please fill in all form fields');
+  //     return;
+  //   }
+
+  // }
   return (
     <>
-      <Form method='post' onSubmit={handleSubmit}>
+      <Form /*onSubmit={handleSubmit} /*ref={form} /*noValidate*/>
         <FormHeader>
           <span className='primary'>{'//'}</span> I Would Love to Hear From You
         </FormHeader>
@@ -148,13 +152,10 @@ const ContactForm = () => {
             <Input
               id='name'
               type='text'
-              name='name'
-              value={nameValue}
-              defaultValue=''
-              onChange={(e) => {
-                setNameValue(e.target.value);
-                console.log(nameValue);
-              }}
+              name='from-name'
+              value={inputValue}
+              // defaultValue=''
+              onChange={handleInputChange}
               placeholder='Full Name'
               // required
             />
@@ -166,12 +167,9 @@ const ContactForm = () => {
               id='email'
               type='email'
               name='email'
-              value={emailValue}
-              defaultValue=''
-              onChange={(e) => {
-                setEmailValue(e.target.value);
-                console.log(e.target.value);
-              }}
+              value={inputValue}
+              // defaultValue=''
+              onChange={handleInputChange}
               placeholder='Example@email.com'
               // required
             />
@@ -187,12 +185,12 @@ const ContactForm = () => {
             <Select
               name='referrer'
               id='referrer'
-              defaultValue='default'
+              // defaultValue='default'
               style={{ backgroundColor: 'rgb(255, 255, 255)' }}
             >
               <Option
                 name='referrer'
-                value='default'
+                // value='default'
                 selected
                 disabled
                 style={{
@@ -232,17 +230,16 @@ const ContactForm = () => {
             rows={10}
             placeholder='Thank you for showing interest in my portfolio.'
             name='message'
-            onChange={(e) => {
-              setMessageValue(e.target.value);
-              console.log(e.target.value);
-            }}
-            value={messageValue}
-            defaultValue=''
+            value={inputValue}
+            onChange={handleInputChange}
+            // defaultValue=''
           />
           {/* {errors.message && <span>{errors.message}</span>} */}
         </TextAreaWrapper>
         <BtnGroup>
           <button className='btn' type='submit' text='SUBMIT' id='theButton'>
+            {/* SUBMIT */}
+            {/* {status} */}
             SUBMIT
           </button>
           <NavLink to='/'>
@@ -250,14 +247,14 @@ const ContactForm = () => {
           </NavLink>
         </BtnGroup>
       </Form>
-      <SubmitModal
+      {/* <SubmitModal
         senderName={nameValue}
         onClick={() => {
           // FIX
           setFormValid(false);
         }}
         style={{ display: formValid ? 'flex' : 'none' }}
-      />
+      /> */}
     </>
   );
 };

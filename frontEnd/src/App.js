@@ -11,7 +11,7 @@ import Layout from './layout/Layout';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import AllWebsitesPage from './pages/AllWebsitesPage';
-
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path='/projects' element={<ProjectsPage />} />
         <Route path='/projects/all-websites' element={<AllWebsitesPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </Layout>

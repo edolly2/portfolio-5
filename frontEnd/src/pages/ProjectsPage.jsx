@@ -149,7 +149,7 @@ const ProjectsPage = () => {
 
         <ProjectSection>
           <ProjectSectionTitle>
-            <span className='primary'>{'//'}</span> EBooks
+            <span className='primary'>{'//'}</span> React Native
           </ProjectSectionTitle>
           <ProjectSectionContent>
             <SectionWrapper></SectionWrapper>
@@ -160,6 +160,21 @@ const ProjectsPage = () => {
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
         </ProjectSection>
+
+        {/* <ProjectSection>
+          <ProjectSectionTitle>
+            <span className='primary'>{'//'}</span> EBooks
+          </ProjectSectionTitle>
+          <ProjectSectionContent>
+            <SectionWrapper></SectionWrapper>
+            <SectionWrapper></SectionWrapper>
+            <SectionWrapper></SectionWrapper>
+          </ProjectSectionContent>
+          <ViewAll href='#'>
+            VIEW ALL <BsFillCaretRightFill />
+          </ViewAll>
+        </ProjectSection> */}
+
         <ProjectSection>
           <ProjectSectionTitle>
             <span className='primary'>{'//'}</span> Resources
@@ -173,9 +188,10 @@ const ProjectsPage = () => {
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
         </ProjectSection>
+
         <ProjectSection>
           <ProjectSectionTitle>
-            <span className='primary'>{'//'}</span> Component Library
+            <span className='primary'>{'//'}</span> Libraries
           </ProjectSectionTitle>
           <ProjectSectionContent>
             <SectionWrapper></SectionWrapper>
@@ -186,6 +202,7 @@ const ProjectsPage = () => {
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
         </ProjectSection>
+
         <ProjectSection>
           <ProjectSectionTitle>
             <span className='primary'>{'//'}</span> For Fun
@@ -199,7 +216,7 @@ const ProjectsPage = () => {
             VIEW ALL <BsFillCaretRightFill />
           </ViewAll>
         </ProjectSection>
-        <ProjectSection>
+        {/* <ProjectSection>
           <ProjectSectionTitle>
             <span className='primary'>{'//'}</span> Blog
           </ProjectSectionTitle>
@@ -208,7 +225,7 @@ const ProjectsPage = () => {
             <SectionWrapper></SectionWrapper>
             <SectionWrapper></SectionWrapper>
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
       </ProjectsPageContainer>
     </Layout>
   );

@@ -22,7 +22,7 @@ const DesktopNav = (props) => {
       <Nav>
         <NavList>
           {/* <DarkMode /> */}
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               style={{ marginLeft: '2.4rem' }}
@@ -32,7 +32,7 @@ const DesktopNav = (props) => {
               HOME
             </NavLink>
           </NavListItem>
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               onClick={props.onNavLinkClick}
@@ -41,7 +41,7 @@ const DesktopNav = (props) => {
               ABOUT
             </NavLink>
           </NavListItem>
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               onClick={props.onNavLinkClick}
@@ -50,7 +50,7 @@ const DesktopNav = (props) => {
               SKILLS
             </NavLink>
           </NavListItem>
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               onClick={props.onNavLinkClick}
@@ -59,7 +59,7 @@ const DesktopNav = (props) => {
               PROJECTS
             </NavLink>
           </NavListItem>
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               onClick={props.onNavLinkClick}
@@ -68,7 +68,7 @@ const DesktopNav = (props) => {
               CONTACT
             </NavLink>
           </NavListItem>
-          <NavListItem>
+          <NavListItem className='nav-link'>
             <NavLink
               className='nav-link'
               onClick={props.onNavLinkClick}

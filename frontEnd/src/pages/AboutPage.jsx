@@ -75,7 +75,7 @@ const AboutPage = () => {
           </AboutPageContentTitle>
 
           <p>
-            My name is Eric Dollinger. I am a 31 year old Web Developer based
+            My name is Eric Dollinger. I am a 32 year old Web Developer based
             out of Omaha, Nebraska. I specialize in the Front End side using
             ReactJS but I am familiar with a lot of the Back End as well as many
             other languages, frameworks, and libraries.

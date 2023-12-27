@@ -189,9 +189,24 @@ li {
 
 }
 
+.contact-icon {
+  font-size: 32px;
+  color: rgba(57, 15, 61, 0.6);
+}
+
+.contact-icon:hover {
+  cursor: pointer;
+  color: rgb(57, 15, 61);
+}
+
+
 .nav-link {
   /* font-size: 32px; */
   color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link-alt {
+  color: #5C98D9;
 }
 
 .nav-link:hover,
@@ -200,6 +215,13 @@ li {
   transform: scale(1.1);
   color: #5C98D9;
 }
+
+.nav-link-alt:hover {
+  color: rgb(57, 15, 61);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 
 .active {
   color: rgb(57, 15, 61);
@@ -219,6 +241,10 @@ li {
 
 .accent {
   color: rgb(57, 15, 61);
+}
+
+.neutral {
+  color: rgb(105, 105, 105)
 }
 
 .footer-link {

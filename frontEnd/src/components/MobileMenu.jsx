@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from 'react-icons/fa';
+import Button from './Button';
 
 const MenuContainer = styled.div`
   position: absolute;
@@ -72,7 +73,7 @@ const MobileMenu = (props) => {
           </MobileNavListItem>
           <MobileNavListItem onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/blog'>
-              BLOG
+              <Button text='Hire Me' />
             </NavLink>
           </MobileNavListItem>
         </MobileNavList>

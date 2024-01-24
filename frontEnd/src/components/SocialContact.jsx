@@ -6,12 +6,18 @@ const Container = styled.div`
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
   background-color: rgba(119, 119, 119, 0.6);
   backdrop-filter: blur(5px);
-  max-width: 80rem;
-  width: 50%;
+
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 2.4rem;
+  max-width: 90vw;
+  width: 100%;
+
+  @media screen and (min-width: 900px) {
+    max-width: 80rem;
+    width: 100%;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -31,46 +37,50 @@ const IconTitle = styled.a`
   align-items: center;
 `;
 
+const SocialTitle = styled.div`
+  white-space: nowrap;
+`;
+
 function SocialContact() {
   return (
     <Container>
       <IconContainer>
         <IconTitle href='https://github.com/edolly2'>
-          <div>
+          <SocialTitle>
             <span className='primary'>&lt;</span>{' '}
             <span className='secondary'>GitHub</span>{' '}
             <span className='primary'>/&gt;</span>
-          </div>
+          </SocialTitle>
           <FaGithub className='contact-icon' />
         </IconTitle>
       </IconContainer>
       <IconContainer>
         <IconTitle href='https://www.linkedin.com/in/eric-dollinger/'>
-          <div>
+          <SocialTitle>
             <span className='primary'>&lt;</span>{' '}
             <span className='secondary'>Linkedin</span>{' '}
             <span className='primary'>/&gt;</span>
-          </div>
+          </SocialTitle>
           <FaLinkedinIn className='contact-icon' />
         </IconTitle>
       </IconContainer>
       <IconContainer>
         <IconTitle href='https://facebook.com/dev.dollinger/'>
-          <div>
+          <SocialTitle>
             <span className='primary'>&lt;</span>{' '}
             <span className='secondary'>Facebook</span>{' '}
             <span className='primary'>/&gt;</span>
-          </div>
+          </SocialTitle>
           <FaFacebook className='contact-icon' />
         </IconTitle>
       </IconContainer>
       <IconContainer>
         <IconTitle href='https://twitter.com/DevDollinger?t=GzpujD8mZUHrLaB_XnVMg&s=01'>
-          <div>
+          <SocialTitle>
             <span className='primary'>&lt;</span>{' '}
             <span className='secondary'>Twitter</span>{' '}
             <span className='primary'>/&gt;</span>
-          </div>
+          </SocialTitle>
           <FaTwitter className='contact-icon' />
         </IconTitle>
       </IconContainer>

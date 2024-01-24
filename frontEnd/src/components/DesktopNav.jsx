@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import Button from './Button';
 // import DarkMode from './DarkMode';
 
 const Container = styled.div`
@@ -12,6 +13,7 @@ const Container = styled.div`
 const Nav = styled.nav``;
 const NavList = styled.ul`
   display: flex;
+  align-items: center;
   gap: 1.6rem;
 `;
 const NavListItem = styled.li``;
@@ -74,7 +76,7 @@ const DesktopNav = (props) => {
               onClick={props.onNavLinkClick}
               to='/blog'
             >
-              BLOG
+              <Button text='Hire Me' />
             </NavLink>
           </NavListItem>
         </NavList>

@@ -41,7 +41,6 @@ body {
 
 body {
   line-height: 1.5;
-  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   min-height: 100vh;
@@ -331,4 +330,12 @@ li {
   color: rgb(204, 204, 204);
   border: 2px solid rgb(43, 43, 43);
 
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
 }

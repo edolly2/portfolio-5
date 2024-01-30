@@ -122,7 +122,7 @@ const ErrorGroup = styled.div`
   gap: 0.8rem;
 `;
 
-const ContactForm = () => {
+const ContactForm = (props) => {
   const [inputData, setInputData] = useState({
     user_name: '',
     user_email: '',
@@ -306,7 +306,13 @@ const ContactForm = () => {
         )}
       </TextAreaWrapper>
       <BtnGroup>
-        <button className='btn' type='submit' text='SUBMIT' id='theButton'>
+        <button
+          className='btn'
+          type='submit'
+          text='SUBMIT'
+          id='theButton'
+          onClick={props.onSubmitClick}
+        >
           SUBMIT
         </button>
         <NavLink to='/'>

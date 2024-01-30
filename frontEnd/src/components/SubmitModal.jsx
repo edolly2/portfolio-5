@@ -1,23 +1,29 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 const SubmitModalOverlay = styled.div`
   position: absolute;
+  max-height: 100vh;
+  height: 100%;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
   bottom: -20px;
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(5px);
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   padding: 0 4rem;
+  z-index: 4;
 `;
+
 const SubmitModalContainer = styled.div`
+  max-width: 635px;
   width: 100%;
-  height: 25%;
-  max-height: 320px;
-  max-width: 535px;
+  max-height: 420px;
+  height: auto;
   background-color: blue;
   padding: 1.6rem;
 `;
@@ -32,28 +38,37 @@ const SubmitModalContent = styled.div`
 const SubmitModalTitle = styled.h3`
   text-align: center;
 `;
-const SubmitModaltext = styled.p``;
+const SubmitModalText = styled.p`
+  text-align: center;
+`;
 // const SubmitModalOverlay = styled.div``;
 // const SubmitModalOverlay = styled.div``;
+const ButtonDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2.4rem 0;
+`;
 
 const SubmitModal = (props) => {
   return (
-    <SubmitModalOverlay style={props.style}>
+    <SubmitModalOverlay className={props.modalClassName}>
       <SubmitModalContainer>
         <SubmitModalContent>
           <SubmitModalTitle>
-            I Appreciate For Your Interest {props.senderName}!
+            I Appreciate You For Your Interest {props.senderName}!
           </SubmitModalTitle>
           <div>
-            <SubmitModaltext>
+            <SubmitModalText>
               Your message has been sent to Eric Dollinger.
-            </SubmitModaltext>
-            <SubmitModaltext>
-              Please wait and you will be returned to the home page shortly.
-            </SubmitModaltext>
-            <SubmitModaltext style={{ marginTop: '1.6rem' }}>
+            </SubmitModalText>
+
+            <SubmitModalTitle style={{ marginTop: '1.6rem' }}>
               Thank you.
-            </SubmitModaltext>
+            </SubmitModalTitle>
+            <ButtonDiv>
+              <Button text='Okay' onClick={props.onModalClick} />
+            </ButtonDiv>
           </div>
         </SubmitModalContent>
       </SubmitModalContainer>

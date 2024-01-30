@@ -22,9 +22,9 @@ const Btn = styled.button`
   }
 `;
 
-const Button = ({ color, text, disabled }) => {
+const Button = ({ color, text, disabled, onClick }) => {
   return (
-    <Btn className={`${color}`} disabled={disabled}>
+    <Btn className={`${color}`} disabled={disabled} onClick={onClick}>
       {text}
     </Btn>
   );

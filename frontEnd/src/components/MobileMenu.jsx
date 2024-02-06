@@ -8,7 +8,7 @@ const MenuContainer = styled.div`
   top: 100%;
   right: 0;
   left: 0;
-  background-color: rgba(119, 119, 119);
+  background-color: rgba(119, 119, 119, 0.6);
   backdrop-filter: blur(5px);
   border-top-left-radius: 0;
   border-top-right-radius: 0;

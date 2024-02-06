@@ -11,7 +11,7 @@ const SubmitModalOverlay = styled.div`
   right: 0;
   bottom: -20px;
   background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   /* display: flex; */
   justify-content: center;
   align-items: center;
@@ -24,7 +24,8 @@ const SubmitModalContainer = styled.div`
   width: 100%;
   max-height: 420px;
   height: auto;
-  background-color: blue;
+  background-color: rgba(119, 119, 119, 0.6);
+  backdrop-filter: blur(5px);
   padding: 1.6rem;
 `;
 

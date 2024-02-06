@@ -8,6 +8,7 @@ const PageLayout = styled.div`
   /* background-color: rgba(119, 119, 119, 0.3); */
   /* backdrop-filter: blur(5px); */
   max-width: 1080px;
+  /* width: 98%; */
   margin: 0 auto;
   /* padding: 2.4rem; */
   padding: 1.6rem 0;

@@ -7,7 +7,7 @@ import {
 
 const touchErrors = (errors) => {
   return Object.entries(errors).reduce((acc, [field, fieldError]) => {
-    acc = [field] = {
+    acc[field] = {
       ...fieldError,
       dirty: true,
     };
@@ -42,7 +42,7 @@ export const useContactFormValidator = (inputData) => {
   }) => {
     let isValid = true;
 
-    const nextErrors = JSON.parse(JSON.stringify(errors));
+    let nextErrors = JSON.parse(JSON.stringify(errors));
 
     if (forceTouchErrors) {
       nextErrors = touchErrors(errors);

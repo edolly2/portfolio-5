@@ -19,66 +19,44 @@ const MenuContainer = styled.div`
   padding: 2.4rem 0;
 `;
 
-const MobileNav = styled.nav`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 4;
-`;
-const MobileNavList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  align-items: center;
-`;
-const MobileNavListItem = styled.li``;
-
-const SocialContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-`;
-
 const MobileMenu = (props) => {
   return (
     <MenuContainer style={props.mobileMenuStyle}>
-      <MobileNav>
-        <MobileNavList>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+      <nav className='mobile-nav'>
+        <ul className='mobile-nav-list'>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/'>
               HOME
             </NavLink>
-          </MobileNavListItem>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+          </li>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/about'>
               ABOUT
             </NavLink>
-          </MobileNavListItem>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+          </li>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/skills'>
               SKILLS
             </NavLink>
-          </MobileNavListItem>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+          </li>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/projects'>
               PROJECTS
             </NavLink>
-          </MobileNavListItem>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+          </li>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/contact'>
               CONTACT
             </NavLink>
-          </MobileNavListItem>
-          <MobileNavListItem onClick={props.onMenuItemClick}>
+          </li>
+          <li className='mobile-nav-list-item' onClick={props.onMenuItemClick}>
             <NavLink className='nav-link' to='/blog'>
               <Button text='Hire Me' />
             </NavLink>
-          </MobileNavListItem>
-        </MobileNavList>
-      </MobileNav>
-      <SocialContainer>
+          </li>
+        </ul>
+      </nav>
+      <div className='mobile-social-container'>
         <a href='https://github.com/edolly2'>
           <FaGithub className='icon' />
         </a>
@@ -91,7 +69,7 @@ const MobileMenu = (props) => {
         <a href='https://twitter.com/DevDollinger?t=GzpujD8mZUHrLaB_XnVMg&s=01'>
           <FaTwitter className='icon' />
         </a>
-      </SocialContainer>
+      </div>
     </MenuContainer>
   );
 };

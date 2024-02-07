@@ -19,60 +19,26 @@ const SubmitModalOverlay = styled.div`
   z-index: 4;
 `;
 
-const SubmitModalContainer = styled.div`
-  max-width: 635px;
-  width: 100%;
-  max-height: 420px;
-  height: auto;
-  background-color: rgba(119, 119, 119, 0.6);
-  backdrop-filter: blur(5px);
-  padding: 1.6rem;
-`;
-
-const SubmitModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.4rem;
-`;
-const SubmitModalTitle = styled.h3`
-  text-align: center;
-`;
-const SubmitModalText = styled.p`
-  text-align: center;
-`;
-// const SubmitModalOverlay = styled.div``;
-// const SubmitModalOverlay = styled.div``;
-const ButtonDiv = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 2.4rem 0;
-`;
-
 const SubmitModal = (props) => {
   return (
     <SubmitModalOverlay className={props.modalClassName}>
-      <SubmitModalContainer>
-        <SubmitModalContent>
-          <SubmitModalTitle>
+      <div className='submit-modal-container'>
+        <div className='submit-modal-content'>
+          <h3 className='submit-modal-title'>
             I Appreciate You For Your Interest {props.senderName}!
-          </SubmitModalTitle>
+          </h3>
           <div>
-            <SubmitModalText>
+            <p className='submit-modal-text'>
               Your message has been sent to Eric Dollinger.
-            </SubmitModalText>
+            </p>
 
-            <SubmitModalTitle style={{ marginTop: '1.6rem' }}>
-              Thank you.
-            </SubmitModalTitle>
-            <ButtonDiv>
+            <h3 className='submit-modal-title sub-title'>Thank you.</h3>
+            <div className='btn-container'>
               <Button text='Okay' onClick={props.onModalClick} />
-            </ButtonDiv>
+            </div>
           </div>
-        </SubmitModalContent>
-      </SubmitModalContainer>
+        </div>
+      </div>
     </SubmitModalOverlay>
   );
 };

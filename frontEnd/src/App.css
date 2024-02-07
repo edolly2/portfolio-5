@@ -1,3 +1,4 @@
+TODO:Change mobile menu color its too transparent
 /* Mobile: 320px—480px
 iPads & tablets: 481px—768px
 laptop: 769px—1024px 
@@ -7,7 +8,6 @@ TV: 1201px-UP */
 /* ------------- */
 /* ----RESET---- */
 /* ------------- */
-
 * {
   /* border: 0.4px solid red; */
   border-radius: 0.4rem;
@@ -340,3 +340,99 @@ li {
 .hidden {
   display: none;
 }
+
+/* ****************** */
+/* ******LAYOUT****** */
+/* ****************** */
+
+.page-layout {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.6rem 0;
+  min-height: 85vh;
+  overflow: hidden;
+}
+
+.page-title {
+  padding: 1.6rem 0;
+}
+
+
+/* ********************** */
+/* ******COMPONENTS****** */
+/* ********************** */
+
+/* *SUBMIT MODAL* */
+
+.submit-modal-container {
+  max-width: 635px;
+  width: 100%;
+  max-height: 420px;
+  height: auto;
+  background-color: rgba(119, 119, 119, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 1.6rem;
+}
+
+.submit-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.submit-modal-title {
+  text-align: center;
+}
+
+.sub-title {
+  margin-top: 1.6rem;
+}
+
+.submit-modal-text {
+  text-align: center;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2.4rem 0;
+}
+
+/* *MOBILE NAV* */
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1.6rem;
+}
+
+.mobile-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.mobile-nav-list-item {}
+
+.mobile-social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* *MOBILE MENU* */

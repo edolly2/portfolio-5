@@ -1,87 +1,66 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import Button from './Button';
-// import DarkMode from './DarkMode';
+import { NavLink } from "react-router-dom";
+import Button from "./Button";
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0 1.6rem;
-`;
-const Nav = styled.nav``;
-const NavList = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-`;
-const NavListItem = styled.li``;
+// Styles moved to DesktopNav.css
 
 const DesktopNav = (props) => {
   return (
-    <Container style={props.DesktopNavStyle}>
-      <Nav>
-        <NavList>
-          {/* <DarkMode /> */}
-          <NavListItem className='nav-link'>
-            <NavLink
-              className='nav-link'
-              style={{ marginLeft: '2.4rem' }}
-              onClick={props.onNavLinkClick}
-              to='/'
-            >
+    <div className="desktopnav-container" style={props.DesktopNavStyle}>
+      <nav>
+        <ul className="desktopnav-list">
+          <li className="nav-link">
+            <NavLink className="nav-link" onClick={props.onNavLinkClick} to="/">
               HOME
             </NavLink>
-          </NavListItem>
-          <NavListItem className='nav-link'>
+          </li>
+          <li className="nav-link">
             <NavLink
-              className='nav-link'
+              className="nav-link"
               onClick={props.onNavLinkClick}
-              to='/about'
+              to="/about"
             >
               ABOUT
             </NavLink>
-          </NavListItem>
-          <NavListItem className='nav-link'>
+          </li>
+          <li className="nav-link">
             <NavLink
-              className='nav-link'
+              className="nav-link"
               onClick={props.onNavLinkClick}
-              to='/skills'
+              to="/skills"
             >
               SKILLS
             </NavLink>
-          </NavListItem>
-          <NavListItem className='nav-link'>
+          </li>
+          <li className="nav-link">
             <NavLink
-              className='nav-link'
+              className="nav-link"
               onClick={props.onNavLinkClick}
-              to='/projects'
+              to="/projects"
             >
               PROJECTS
             </NavLink>
-          </NavListItem>
-          <NavListItem className='nav-link'>
+          </li>
+          <li className="nav-link">
             <NavLink
-              className='nav-link'
+              className="nav-link"
               onClick={props.onNavLinkClick}
-              to='/contact'
+              to="/contact"
             >
               CONTACT
             </NavLink>
-          </NavListItem>
-          <NavListItem className='nav-link'>
+          </li>
+          <li className="nav-link">
             <NavLink
-              className='nav-link'
+              className="nav-link"
               onClick={props.onNavLinkClick}
-              to='/blog'
+              to="/blog"
             >
-              <Button text='Hire Me' />
+              <Button text="Hire Me" />
             </NavLink>
-          </NavListItem>
-        </NavList>
-      </Nav>
-    </Container>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

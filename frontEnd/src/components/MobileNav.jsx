@@ -1,10 +1,9 @@
-import { CgMenuGridO } from 'react-icons/cg';
+import { CgMenuGridO } from "react-icons/cg";
 
 const MobileNav = (props) => {
   return (
-    <div className='nav-container'>
-      {/* <DarkMode /> */}
-      <CgMenuGridO className='icon menu-icon' onClick={props.onMenuClick} />
+    <div className="nav-container">
+      <CgMenuGridO className="icon menu-icon" onClick={props.onMenuClick} />
     </div>
   );
 };

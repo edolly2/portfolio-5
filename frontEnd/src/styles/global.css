@@ -5,7 +5,7 @@
   -webkit-text-size-adjust: 100%;
   --color-primary: #5c98d9;
   --color-accent: #390f3d;
-  --color-surface: rgba(119, 119, 119, 0.6);
+  --color-surface: rgba(119, 119, 119, 0.9);
   /* Spacing scale */
   --spacing-xs: 0.4rem;
   --spacing-sm: 0.8rem;
@@ -212,9 +212,12 @@ li {
 .page-layout {
   max-width: 1080px;
   margin: 0 auto;
-  padding: var(--spacing-md) 0;
+  /* padding: var(--spacing-md) 0; */
   min-height: 85vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-title {
@@ -320,24 +323,29 @@ li {
 .header-container {
   position: relative;
   display: flex;
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   padding: var(--spacing-sm);
   z-index: 4;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .footer-container {
+  max-width: 95%;
   position: sticky;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   padding: var(--spacing-lg);
   z-index: 4;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), 2px -2px 5px rgba(0, 0, 0, 0.7);
-  margin-top: var(--spacing-3xl);
+  margin: 0 auto;
+  /* margin-top: var(--spacing-3xl); */
+  margin-top: var(--spacing-lg);
   font-size: 1.2rem;
 }
 
@@ -354,7 +362,7 @@ li {
 }
 
 .underline {
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   width: 100%;
   height: 2px;
   margin: 0 auto var(--spacing-md);
@@ -401,7 +409,7 @@ li {
   justify-content: center;
   gap: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
 }
 
@@ -431,8 +439,9 @@ li {
   background-color: rgba(119, 119, 119, 0.5);
 }
 
-.homeinfo-container {
+.home-info-container {
   display: flex;
+  max-width: 95%;
   flex-direction: column;
   border: 1px solid rgba(119, 119, 119, 0.5);
   border-radius: var(--spacing-sm);
@@ -440,22 +449,22 @@ li {
   align-items: center;
   gap: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
 }
 
-.homeinfo-title {
+.home-info-title {
   align-self: flex-start;
 }
 
-.homeinfo-paratitle {
+.home-info-paratitle {
   margin: var(--spacing-lg) 0 0;
 }
 
 .social-contact-container {
   padding: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   margin: 0 auto;
   display: flex;
@@ -581,9 +590,10 @@ li {
 .mobile-menu-container {
   position: absolute;
   top: 100%;
+  /* bottom: 100%; */
   right: 0;
   left: 0;
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -614,7 +624,7 @@ li {
 .contact-form {
   padding: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   max-width: 90vw;
   width: 100%;
@@ -753,7 +763,7 @@ li {
 .about-content {
   padding: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
 }
 
@@ -774,7 +784,7 @@ li {
 .all-websites-container {
   padding: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
 }
 
@@ -877,7 +887,7 @@ li {
 .skills-container {
   padding: var(--spacing-lg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: var(--color-surface);
   backdrop-filter: blur(5px);
 }
 

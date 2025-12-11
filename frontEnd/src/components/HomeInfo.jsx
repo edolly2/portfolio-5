@@ -1,7 +1,7 @@
 const HomeInfo = (props) => {
   return (
-    <div className={`homeinfo-container ${props.className || ""}`}>
-      <h2 className="homeinfo-title">
+    <div className={`home-info-container ${props.className || ""}`}>
+      <h2 className="home-info-title">
         <span className="primary">{"//"}</span>{" "}
         <span className="secondary">Web Developer</span>
       </h2>
@@ -20,7 +20,7 @@ const HomeInfo = (props) => {
             <span className="blue">Title:</span> Web Developer
           </li>
         </ul>
-        <h3 className="homeinfo-paratitle">
+        <h3 className="home-info-paratitle">
           <span className="primary">{"//"}</span>{" "}
           <span className="secondary">Bio</span>
         </h3>

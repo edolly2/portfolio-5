@@ -397,6 +397,9 @@ li {
 .sitebrand-img {
   width: calc(4rem + 1.5vw);
   height: auto;
+  aspect-ratio: 1;
+  background-color: rgba(119, 119, 119, 0.2);
+  animation: imageLoad 0.3s ease-in-out;
 }
 
 .card-wrapper {
@@ -422,8 +425,10 @@ li {
 .card-img {
   max-width: 12.8rem;
   height: auto;
+  aspect-ratio: 1;
   background-color: rgba(119, 119, 119, 0.7);
   border-radius: 50%;
+  animation: imageLoad 0.4s ease-in-out;
 }
 
 .card-social-wrapper {
@@ -501,6 +506,25 @@ li {
 
 .social-title {
   white-space: nowrap;
+}
+
+/* Image loading animation */
+@keyframes imageLoad {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Image optimization */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes loadingAnimation {
@@ -758,6 +782,8 @@ li {
   width: 50vw;
   max-width: 395px;
   height: auto;
+  aspect-ratio: 0.73;
+  animation: imageLoad 0.5s ease-in-out;
 }
 
 .about-content {

@@ -14,6 +14,12 @@ const AllWebsitesPage = () => {
   const handleMouseLeave = () => {
     setIsHovering(true);
   };
+
+  const imageProps = {
+    loading: "lazy",
+    decoding: "async",
+  };
+
   return (
     <Layout>
       <PageTitle title="Project Websites" />
@@ -36,7 +42,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={TinDog}
-                  alt="#"
+                  alt="TinDog project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -53,7 +60,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={Paco}
-                  alt="#"
+                  alt="Paco project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -70,7 +78,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={Paco}
-                  alt="#"
+                  alt="Paco project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -89,7 +98,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={Paco}
-                  alt="#"
+                  alt="Paco project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -106,7 +116,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={Paco}
-                  alt="#"
+                  alt="Paco project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -123,7 +134,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={Paco}
-                  alt="#"
+                  alt="Paco project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -142,7 +154,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={TinDog}
-                  alt="#"
+                  alt="TinDog project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -159,7 +172,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={TinDog}
-                  alt="#"
+                  alt="TinDog project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />
@@ -176,7 +190,8 @@ const AllWebsitesPage = () => {
                 <img
                   className="website-img"
                   src={TinDog}
-                  alt="#"
+                  alt="TinDog project website"
+                  {...imageProps}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 />

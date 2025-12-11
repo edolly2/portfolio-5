@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../layout/Layout";
 import PageTitle from "../layout/PageTitle";
-import MePose from "../assets/profile-picture-pose.png";
+import MePose from "../assets/profile-picture-pose.webp";
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 
 const AboutPage = () => {
@@ -11,7 +11,14 @@ const AboutPage = () => {
       <PageTitle title="About Me" />
       <div className="about-wrapper">
         <div className="img-container">
-          <img className="me-img" src={MePose} alt="me" />
+          <img
+            className="me-img"
+            src={MePose}
+            alt="Eric Dollinger - About"
+            loading="lazy"
+            width="800"
+            height="1100"
+          />
         </div>
         <div className="about-content">
           <h2 className="about-title">

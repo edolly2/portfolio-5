@@ -11,6 +11,9 @@ const Card = (props) => {
         className="card-img"
         src={Headshot}
         alt="Full Stack Developer, Eric Dollinger"
+        loading="lazy"
+        width="204"
+        height="204"
       />
       <div className="card-line" />
       <div className="card-social-wrapper">

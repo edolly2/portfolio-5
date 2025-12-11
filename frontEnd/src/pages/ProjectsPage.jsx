@@ -35,7 +35,8 @@ const ProjectsPage = () => {
               <img
                 className="project-img"
                 src={TinDog}
-                alt="#"
+                alt="TinDog project"
+                loading="lazy"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
@@ -52,7 +53,8 @@ const ProjectsPage = () => {
               <img
                 className="project-img"
                 src={Paco}
-                alt="#"
+                alt="Paco project"
+                loading="lazy"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />

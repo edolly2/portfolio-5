@@ -265,6 +265,7 @@ li {
   align-items: center;
   justify-content: flex-end;
   padding: 0 var(--spacing-md);
+  flex-grow: 1;
 }
 
 .desktopnav-container nav {
@@ -323,13 +324,14 @@ li {
 .header-container {
   position: relative;
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--color-surface);
   backdrop-filter: blur(5px);
   padding: var(--spacing-sm);
   z-index: 4;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  max-width: 95%;
-  margin: 0 auto;
 }
 
 .footer-container {
@@ -392,6 +394,7 @@ li {
 
 .sitebrand-wrapper {
   display: flex;
+  flex-shrink: 0;
 }
 
 .sitebrand-img {

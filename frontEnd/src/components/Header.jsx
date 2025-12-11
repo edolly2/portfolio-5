@@ -8,8 +8,20 @@ const Header = (props) => {
   const [width, setWidth] = useState(window.innerWidth);
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
   const breakpoint = 769;
+
   useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Ensure width is set on mount
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return width < breakpoint ? (

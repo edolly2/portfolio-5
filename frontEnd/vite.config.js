@@ -15,10 +15,4 @@ export default defineConfig({
       },
     },
   },
-  // Enable compression hints
-  server: {
-    headers: {
-      "Content-Encoding": "gzip",
-    },
-  },
 });

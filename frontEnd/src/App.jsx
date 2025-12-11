@@ -14,20 +14,24 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <Layout>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <LoadingScreen />
       <Header />
-      <Routes>
-        <Route path="/" exact element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/skills" element={<SkillsPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/projects/all-websites" element={<AllWebsitesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/all-websites" element={<AllWebsitesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Layout>
       <Footer />
-    </Layout>
+    </div>
   );
 }
 

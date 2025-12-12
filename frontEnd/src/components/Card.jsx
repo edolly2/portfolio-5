@@ -1,19 +1,19 @@
-import React from "react";
 import Headshot from "../assets/me-headshot.png";
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa";
 import Button from "./Button";
 import { NavLink } from "react-router-dom";
+import ResponsiveImage from "./ResponsiveImage";
 
 const Card = (props) => {
   return (
     <div className={`card-wrapper ${props.className || ""}`}>
-      <img
+      <ResponsiveImage
         className="card-img"
         src={Headshot}
         alt="Full Stack Developer, Eric Dollinger"
         loading="lazy"
         width="204"
-        height="204"
+        height="auto"
       />
       <div className="card-line" />
       <div className="card-social-wrapper">

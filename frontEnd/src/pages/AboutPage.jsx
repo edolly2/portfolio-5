@@ -27,7 +27,7 @@ const AboutPage = () => {
           </h2>
           <br />
           <p>
-            My name is Eric Dollinger, and Im a 32-year-old Web Developer based
+            My name is Eric Dollinger, and Im a 34-year-old Web Developer based
             in Omaha, Nebraska. I specialize in front-end development with
             ReactJS, but I also have strong familiarity with back-end
             technologies as well as a wide range of languages, frameworks, and
@@ -50,7 +50,7 @@ const AboutPage = () => {
               I graduated with honors from Nucamp, and I hold several additional
               certifications, all of which can be viewed on my{" "}
               <a href="https://www.linkedin.com/in/eric-dollinger/">Linkedin</a>{" "}
-              profile. I bring 4-5 years of hands-on experience, and I'm
+              profile. I bring 6-7 years of hands-on experience, and I'm
               committed to continuously expanding my skill set. I make it a
               priority to stay current with the latest best practices, design
               patterns, technologies, and industry standards.

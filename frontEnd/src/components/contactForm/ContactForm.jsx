@@ -152,7 +152,7 @@ const ContactForm = (props) => {
         <span className="primary">{"//"}</span> I Would Love to Hear From You
       </h3>
 
-      {/* Honeypot field - hidden from users but visible to bots */}
+      {/* Honeypot field */}
       <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
         <label htmlFor="honeypot">Don't fill this out if you're human</label>
         <input

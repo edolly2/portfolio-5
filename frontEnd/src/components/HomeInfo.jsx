@@ -14,7 +14,7 @@ const HomeInfo = (props) => {
             <span className="blue">From:</span> Omaha, Nebraska
           </li>
           <li>
-            <span className="blue">Age:</span> 32
+            <span className="blue">Age:</span> 34
           </li>
           <li>
             <span className="blue">Title:</span> Web Developer
@@ -25,11 +25,11 @@ const HomeInfo = (props) => {
           <span className="secondary">Bio</span>
         </h3>
         <p>
-          I am a 32 year old Web Developer based out of Omaha, Nebraska. I
-          specialize in the Front End side using ReactJS but I am familiar with
-          a lot of the Back End as well as many other languages, frameworks, and
-          libraries. Feel free to look around to find out more, see my work and
-          projects, shoot me a message, and much more.
+          I’m a web developer based in Omaha, Nebraska, specializing in
+          front-end development with React. I bring a well-rounded skill set
+          that includes back-end development and experience with a wide range of
+          modern technologies. Explore my work, view my projects, and feel free
+          to reach out.
         </p>
       </div>
     </div>

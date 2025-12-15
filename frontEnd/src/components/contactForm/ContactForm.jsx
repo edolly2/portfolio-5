@@ -80,6 +80,9 @@ const ContactForm = (props) => {
 
     setIsSubmitting(true);
     setSubmitStatus(null);
+    // Show modal immediately with "sending" state
+    if (props.onSubmitClick)
+      props.onSubmitClick(null, "Sending your message...");
 
     try {
       // Sanitize all inputs
@@ -104,24 +107,35 @@ const ContactForm = (props) => {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        // Update modal with success
         setSubmitStatus({
           success: true,
           message: data.message || "Message sent successfully!",
         });
         resetForm();
-        if (props.onSubmitClick) props.onSubmitClick();
+        if (props.onSubmitClick)
+          props.onSubmitClick(true, "Message sent successfully!");
       } else {
+        // Update modal with error
         setSubmitStatus({
           success: false,
           message: data.message || "Failed to send message. Please try again.",
         });
+        if (props.onSubmitClick)
+          props.onSubmitClick(
+            false,
+            "Message not sent. Please try again later."
+          );
       }
     } catch (error) {
+      // Update modal with error
       console.error("Error sending message:", error);
       setSubmitStatus({
         success: false,
         message: "Network error. Please check your connection and try again.",
       });
+      if (props.onSubmitClick)
+        props.onSubmitClick(false, "Message not sent. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
